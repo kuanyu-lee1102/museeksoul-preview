@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惠歆音樂社 Museeksoul — 年度節目冊・序曲｜雲林・斗南 在地音樂教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&family=Montserrat:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --paper:#FCFCFA;
+    --ink:#1A1A1A;
+    --body:#3A3A3A;
+    --grey:#9A968F;
+    --sage:#6E7A5B;
+    --sage-deep:#4C543E;
+    --stone:#D9D2C5;
+    --line:#E7E3DA;
+    --wine:#9B4A3C;
+    --serif-lat:"Cormorant Garamond", Georgia, serif;
+    --serif-tc:"Noto Serif TC", serif;
+    --sans:"Montserrat","Noto Sans TC",sans-serif;
+    --script:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--serif-tc);
+    color:var(--body);
+    background:var(--white);
+    line-height:1.85;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(22px,5vw,56px);}
+  .narrow{max-width:880px;margin:0 auto;padding:0 clamp(22px,5vw,56px);}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.36em;
+    text-transform:uppercase;
+    color:var(--grey);
+    font-weight:500;
+  }
+  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.16;}
+  .lat{font-family:var(--serif-lat);}
+
+  /* ---------- top bar ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.93);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand img{height:42px;width:auto;}
+  .brand .bz{font-family:var(--serif-lat);font-size:22px;letter-spacing:.02em;color:var(--ink);line-height:1;}
+  .brand .bz small{display:block;font-family:var(--serif-tc);font-size:11px;letter-spacing:.32em;color:var(--grey);margin-top:3px;}
+  nav.links{display:flex;gap:30px;align-items:center;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;color:var(--body);}
+  nav.links a{padding-bottom:2px;border-bottom:1px solid transparent;transition:.25s;}
+  nav.links a:hover{color:var(--sage-deep);border-color:var(--sage);}
+  nav.links a.here{color:var(--ink);border-color:var(--ink);}
+  .nav-cta{
+    font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+    border:1px solid var(--wine);padding:10px 20px;color:var(--wine);
+    transition:.25s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--wine);color:#fff;}
+
+  /* ---------- cover (programme booklet front) ---------- */
+  .cover{padding:clamp(20px,3.4vw,40px) 0 0;}
+  .cover-frame{position:relative;}
+  .cover-photo{position:relative;height:clamp(500px,84vh,800px);overflow:hidden;border:1px solid rgba(255,255,255,.14);}
+  .cover-photo img{width:100%;height:100%;object-fit:cover;object-position:center 42%;}
+  .cover-photo::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(180deg,rgba(16,16,16,.62) 0%,rgba(16,16,16,.20) 30%,rgba(16,16,16,.20) 56%,rgba(16,16,16,.74) 100%);
+  }
+  /* thin inset rule, like a printed booklet plate */
+  .cover-plate{position:absolute;inset:clamp(16px,2.4vw,30px);z-index:2;border:1px solid rgba(237,231,217,.42);pointer-events:none;}
+  .cover-top{
+    position:absolute;top:0;left:0;right:0;z-index:3;
+    display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+    padding:clamp(34px,4.6vw,58px) clamp(34px,5.2vw,68px) 0;
+    font-family:var(--sans);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#EDE7D9;
+  }
+  .cover-top .col b{font-family:var(--serif-lat);font-style:italic;font-size:15px;letter-spacing:.03em;text-transform:none;display:block;margin-top:7px;font-weight:500;color:#fff;}
+  .cover-top .r{text-align:right;}
+  .cover-center{
+    position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);z-index:3;
+    text-align:center;padding:0 clamp(30px,7vw,90px);
+  }
+  .cover-center .kicker{
+    font-family:var(--sans);font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:#EDE7D9;
+    margin-bottom:clamp(20px,3vw,30px);
+  }
+  .cover-center .kicker .rule{display:inline-block;width:38px;height:1px;background:rgba(237,231,217,.55);vertical-align:middle;margin:0 16px;}
+  .cover-center .overture{
+    font-family:var(--serif-lat);font-style:italic;font-weight:500;
+    font-size:clamp(56px,12vw,150px);color:#fff;line-height:.92;letter-spacing:.01em;
+    text-shadow:0 2px 40px rgba(0,0,0,.4);
+  }
+  .cover-center .zh{
+    font-family:var(--serif-tc);font-weight:400;
+    font-size:clamp(19px,3vw,34px);color:#F2EEE4;line-height:1.5;letter-spacing:.14em;
+    margin-top:clamp(22px,3vw,34px);
+    text-shadow:0 1px 24px rgba(0,0,0,.4);
+  }
+  .cover-bottom{
+    position:absolute;left:0;right:0;bottom:0;z-index:3;
+    display:flex;justify-content:space-between;align-items:flex-end;gap:20px;
+    padding:0 clamp(34px,5.2vw,68px) clamp(34px,4.6vw,58px);
+    font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(237,231,217,.82);
+  }
+  .cover-bottom .season{font-family:var(--serif-lat);font-style:italic;font-size:18px;letter-spacing:.02em;text-transform:none;color:#fff;}
+  .cover-bottom .cap{text-align:right;line-height:1.6;}
+
+  /* ---------- prelude (opening note) ---------- */
+  .prelude{padding:clamp(70px,9vw,120px) 0 clamp(48px,6vw,76px);}
+  .prelude .narrow{max-width:34em;}
+  .prelude .eyebrow{margin-bottom:26px;}
+  .prelude .lat{
+    font-family:var(--serif-lat);font-style:italic;font-size:clamp(22px,3vw,32px);
+    color:var(--grey);margin-bottom:18px;
+  }
+  .prelude p{
+    font-family:var(--serif-tc);font-weight:300;
+    font-size:clamp(21px,2.8vw,32px);color:var(--ink);line-height:1.6;letter-spacing:.01em;
+  }
+  .prelude p .quiet{color:var(--sage-deep);}
+  .prelude .sub-lat{
+    font-family:var(--serif-lat);font-style:italic;font-size:clamp(17px,2vw,22px);
+    color:var(--grey);margin-top:24px;display:block;
+  }
+
+  /* ---------- gardener / programme note ---------- */
+  .note{padding:clamp(40px,6vw,72px) 0 clamp(56px,8vw,100px);}
+  .note-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,7vw,90px);align-items:center;}
+  .note .eyebrow{margin-bottom:24px;}
+  .note .quote{
+    font-family:var(--serif-lat);font-style:italic;font-size:clamp(25px,3.2vw,38px);
+    color:var(--ink);line-height:1.3;margin-bottom:24px;
+  }
+  .note .quote .tc{
+    font-family:var(--serif-tc);font-style:normal;display:block;
+    font-size:.6em;color:var(--sage-deep);margin-top:16px;letter-spacing:.05em;
+  }
+  .note p.body{font-size:15.5px;color:var(--body);max-width:34em;}
+  .note-art{display:flex;justify-content:center;align-items:center;}
+  .note-art svg{width:100%;max-width:300px;height:auto;}
+
+  /* ---------- programme / repertoire (the tracklist) ---------- */
+  .programme{background:var(--paper);border-top:1px solid var(--line);}
+  .prog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:clamp(56px,8vw,96px) 0 0;}
+  .prog-head h2{font-size:clamp(28px,4vw,50px);}
+  .prog-head h2 .lat{display:block;font-style:italic;color:var(--grey);font-size:.46em;font-weight:400;margin-bottom:10px;letter-spacing:.02em;}
+  .prog-head .meta{max-width:21em;text-align:right;}
+  .prog-head .meta p{font-size:13.5px;color:var(--body);}
+  .prog-head .meta .axis{font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin-top:12px;}
+
+  .prog-list{padding:36px 0 clamp(48px,7vw,90px);}
+  .track{
+    display:grid;grid-template-columns:74px 1fr auto;gap:28px;align-items:baseline;
+    padding:22px 8px;border-top:1px solid var(--line);transition:.25s;
+  }
+  .prog-list .track:last-child{border-bottom:1px solid var(--line);}
+  .track:hover{background:#fff;padding-left:18px;padding-right:18px;}
+  .track .no{font-family:var(--serif-lat);font-style:italic;font-size:22px;color:var(--sage);}
+  .track .ti{display:flex;flex-direction:column;gap:5px;}
+  .track .ti .line{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;}
+  .track .ti b{font-family:var(--serif-tc);font-weight:500;font-size:clamp(20px,2.4vw,25px);color:var(--ink);letter-spacing:.02em;}
+  .track .ti .en{font-family:var(--serif-lat);font-style:italic;font-size:16px;color:var(--grey);}
+  .track .ti .ds{font-size:14px;color:var(--body);font-weight:300;max-width:40em;}
+  .track .form{
+    font-family:var(--sans);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);
+    text-align:right;white-space:nowrap;align-self:center;
+  }
+  .prog-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-top:30px;border-top:1px solid var(--line);}
+  .prog-foot p{font-size:13.5px;color:var(--body);max-width:30em;}
+  .link-arrow{font-family:var(--sans);font-size:12px;letter-spacing:.16em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;text-transform:uppercase;white-space:nowrap;transition:.25s;}
+  .link-arrow:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+
+  /* ---------- trust strip ---------- */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .trust-in{display:flex;flex-wrap:wrap;align-items:stretch;}
+  .trust-item{flex:1;min-width:170px;padding:30px 32px;border-right:1px solid var(--line);}
+  .trust-item:last-child{border-right:none;}
+  .trust-item .n{font-family:var(--serif-lat);font-size:36px;color:var(--ink);line-height:1;font-weight:500;}
+  .trust-item .n .u{font-size:.52em;color:var(--sage);font-style:italic;margin-left:2px;}
+  .trust-item .t{font-family:var(--serif-tc);font-size:15px;color:var(--ink);margin-top:9px;font-weight:400;}
+  .trust-item .s{font-family:var(--sans);font-size:10px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin-top:5px;}
+
+  /* ---------- intermission / lawn (supporting plate) ---------- */
+  .inter{background:var(--sage-deep);color:#EDEFE8;padding:clamp(58px,8vw,104px) 0;}
+  .inter .eyebrow{color:#b9c0a8;}
+  .inter-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:40px;flex-wrap:wrap;}
+  .inter-head h2{color:#fff;font-size:clamp(24px,3.2vw,40px);}
+  .inter-head h2 .lat{display:block;font-style:italic;color:#b9c0a8;font-size:.5em;font-weight:400;margin-bottom:8px;}
+  .inter-head p{max-width:24em;font-size:14px;color:#d6dac8;}
+  .inter-photo img{width:100%;height:clamp(320px,42vw,520px);object-fit:cover;object-position:center 38%;}
+  .inter-photo figcaption{
+    margin-top:18px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline;
+    font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#b9c0a8;
+  }
+  .inter-photo figcaption .lat{font-family:var(--serif-lat);font-style:italic;font-size:19px;letter-spacing:0;text-transform:none;color:#fff;}
+  .inter-note{margin-top:22px;font-family:var(--sans);font-size:10px;letter-spacing:.16em;color:#9aa389;text-transform:uppercase;}
+
+  /* ---------- finale / booking ---------- */
+  .finale{text-align:center;padding:clamp(64px,9vw,116px) 0;}
+  .finale .laurel-mini{color:var(--sage);margin:0 auto 22px;}
+  .finale .eyebrow{margin-bottom:20px;}
+  .finale h2{font-size:clamp(29px,4.2vw,50px);margin-bottom:18px;}
+  .finale .sub-lat{font-family:var(--serif-lat);font-style:italic;font-size:21px;color:var(--grey);margin-bottom:36px;}
+  .btn-wine{
+    font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--wine);color:#fff;padding:18px 42px;transition:.25s;display:inline-block;
+  }
+  .btn-wine:hover{background:#7e3b30;}
+  .finale .meta{margin-top:26px;font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--grey);}
+  .finale .meta a{color:var(--ink);border-bottom:1px solid var(--stone);}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--paper);}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start;}
+  .foot-brand img{height:54px;margin-bottom:16px;}
+  .foot-brand p{font-size:13.5px;color:var(--body);max-width:24em;}
+  .foot-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:16px;font-weight:500;}
+  .foot-col p,.foot-col a{display:block;font-size:14px;color:var(--body);margin-bottom:9px;}
+  .foot-col a:hover{color:var(--sage-deep);}
+  .foot-bot{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--grey);}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    nav.links{display:none;}
+    .note-grid{grid-template-columns:1fr;}
+    .note-art{order:-1;margin-bottom:6px;}
+    .foot-grid{grid-template-columns:1fr;gap:30px;}
+    .prog-head .meta{text-align:left;}
+    .track{grid-template-columns:40px 1fr;gap:6px 16px;padding:20px 4px;}
+    .track .no{grid-row:span 2;font-size:18px;}
+    .track .form{grid-column:2;text-align:left;margin-top:4px;align-self:auto;}
+    .track:hover{padding-left:4px;padding-right:4px;}
+  }
+  @media(max-width:560px){
+    .nav-in{height:64px;}
+    .brand img{height:36px;}
+    .brand .bz{font-size:19px;}
+    .nav-cta{padding:8px 14px;font-size:11px;letter-spacing:.1em;}
+    .cover-photo{height:clamp(480px,90vh,620px);}
+    .cover-top .r,.cover-bottom .cap{display:none;}
+    .trust-item{flex:1 1 50%;border-bottom:1px solid var(--line);padding:22px 18px;}
+    .trust-item:nth-child(2n){border-right:none;}
+    .trust-item .n{font-size:30px;}
+    .inter-photo img{height:clamp(260px,80vw,380px);}
+    .inter-photo figcaption{flex-direction:column;gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <img src="../../assets/logo-wordmark.jpg" alt="惠歆音樂社 Museeksoul">
+      <span class="bz">Museeksoul<small>惠 歆 音 樂 社</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html" class="here">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </nav>
+    <a class="nav-cta" href="#">預約試上</a>
+  </div>
+</header>
+
+<!-- ===== COVER (programme booklet front — concert hall photograph) ===== -->
+<section class="cover">
+  <div class="wrap cover-frame">
+    <div class="cover-photo">
+      <img src="../../assets/photo-hall.jpg" alt="惠歆音樂社年度音樂會，木質尖頂音樂廳內滿座的師生與家長，前排師生穿淺藍上衣舉手歡呼">
+      <span class="cover-plate" aria-hidden="true"></span>
+      <div class="cover-top">
+        <div class="col">雲林 · 斗南 在地音樂教室<b>Museeksoul</b></div>
+        <div class="col r">年度節目冊<b>Concert Programme</b></div>
+      </div>
+      <div class="cover-center">
+        <div class="kicker"><span class="rule"></span>序曲 · OVERTURE<span class="rule"></span></div>
+        <div class="overture">Overture</div>
+        <div class="zh">在音符間找到自信，<br>在樂音中培養溫度。</div>
+      </div>
+      <div class="cover-bottom">
+        <div class="season">Seek your music soul.</div>
+        <div class="cap">惠歆年度音樂會 · 滿座的廳<br>Annual Concert · Dounan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRELUDE (opening note) ===== -->
+<section class="prelude">
+  <div class="narrow">
+    <div class="eyebrow">卷首語 · The Opening Note</div>
+    <p class="lat">A house, full of music.</p>
+    <p>惠歆音樂，用陪伴，<span class="quiet">培養每一顆音樂靈魂。</span></p>
+    <span class="sub-lat">Museeksoul — Seek your music soul.</span>
+  </div>
+</section>
+
+<!-- ===== PROGRAMME NOTE / GARDENER ===== -->
+<section class="note">
+  <div class="wrap note-grid">
+    <div class="note-copy">
+      <div class="eyebrow">節目導聆 · Programme Note</div>
+      <p class="quote">
+        Every player on this stage began with one note.
+        <span class="tc">喜歡，才是最強大的動力。</span>
+      </p>
+      <p class="body">音樂園丁，用無比的熱忱與耐心澆灌每位音樂種子，以期萌芽、成長、茁壯，陪伴莘莘學子綻放出屬於自己的音樂之花。封面這一廳的人，都是從第一個音符開始的。</p>
+    </div>
+    <div class="note-art">
+      <!-- elegant inline botanical: laurel wreath cradling a music seed -->
+      <svg viewBox="0 0 300 320" fill="none" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+        <path d="M150 300 C90 270 55 215 50 150"/>
+        <path d="M150 300 C210 270 245 215 250 150"/>
+        <g>
+          <path d="M70 210 q-22 -6 -30 -26 q22 -2 32 16z"/>
+          <path d="M62 180 q-22 -8 -28 -28 q22 0 30 18z"/>
+          <path d="M58 150 q-22 -8 -26 -29 q22 1 28 19z"/>
+          <path d="M60 122 q-20 -10 -24 -30 q21 3 26 21z"/>
+        </g>
+        <g>
+          <path d="M230 210 q22 -6 30 -26 q-22 -2 -32 16z"/>
+          <path d="M238 180 q22 -8 28 -28 q-22 0 -30 18z"/>
+          <path d="M242 150 q22 -8 26 -29 q-22 1 -28 19z"/>
+          <path d="M240 122 q20 -10 24 -30 q-21 3 -26 21z"/>
+        </g>
+        <path d="M150 250 V160" stroke-width="1.3"/>
+        <path d="M150 200 C150 170 120 158 96 168 c0 30 30 30 54 12z"/>
+        <path d="M150 188 C150 162 178 152 200 162 c0 28 -26 26 -50 18z"/>
+        <path d="M150 150 c0 -26 26 -30 26 -52 c0 -16 -22 -18 -22 0 c0 30 6 60 -6 78 c-8 12 -26 8 -26 -6 c0 -10 14 -12 16 -2" stroke-width="1.1"/>
+        <circle cx="150" cy="160" r="2.4" fill="var(--sage)" stroke="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMME / REPERTOIRE (the tracklist of courses) ===== -->
+<section class="programme">
+  <div class="wrap">
+    <div class="prog-head">
+      <h2><span class="lat">The Programme.</span>曲目單</h2>
+      <div class="meta">
+        <p>九個段落，八樣樂器加上一個一起玩音樂的團班——如同一場音樂會的曲目，依年齡與目的，找到屬於自己的開始。</p>
+        <div class="axis">Repertoire · Nine pieces</div>
+      </div>
+    </div>
+
+    <div class="prog-list">
+      <a class="track" href="courses.html">
+        <div class="no">I</div>
+        <div class="ti"><div class="line"><b>鋼琴</b><span class="en">Piano</span></div><div class="ds">從第一個音符開始，種下一輩子的興趣。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">II</div>
+        <div class="ti"><div class="line"><b>小提琴</b><span class="en">Violin</span></div><div class="ds">站上舞台前，先在這裡找到屬於自己的聲音。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">III</div>
+        <div class="ti"><div class="line"><b>大提琴</b><span class="en">Cello</span></div><div class="ds">低沉而溫厚的共鳴，陪你慢慢把樂句拉長。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">IV</div>
+        <div class="ti"><div class="line"><b>吉他</b><span class="en">Guitar</span></div><div class="ds">六根弦，就能彈出你最想哼的那首歌。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">V</div>
+        <div class="ti"><div class="line"><b>爵士鼓</b><span class="en">Drums</span></div><div class="ds">把滿身的活力，敲成有節奏的快樂。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">VI</div>
+        <div class="ti"><div class="line"><b>古箏</b><span class="en">Guzheng</span></div><div class="ds">指尖在弦上行走，彈出一段東方的留白。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">VII</div>
+        <div class="ti"><div class="line"><b>長笛</b><span class="en">Flute</span></div><div class="ds">一口氣，化成清亮綿長的旋律線。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">VIII</div>
+        <div class="ti"><div class="line"><b>烏克麗麗</b><span class="en">Ukulele</span></div><div class="ds">最輕巧的入門，幾個和弦就能開始唱。</div></div>
+        <div class="form">Solo</div>
+      </a>
+      <a class="track" href="courses.html">
+        <div class="no">IX</div>
+        <div class="ti"><div class="line"><b>團班</b><span class="en">Ensemble</span></div><div class="ds">一個人練習會累，一群人玩音樂才有趣。</div></div>
+        <div class="form">Tutti</div>
+      </a>
+    </div>
+
+    <div class="prog-foot">
+      <p>每一門課都掛上「年齡 × 目的」兩組標籤，完整曲目單與標籤系統收在課程頁。</p>
+      <a class="link-arrow" href="courses.html">翻開完整曲目單 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP (grounded in brief) ===== -->
+<div class="wrap">
+  <div class="trust">
+    <div class="trust-in">
+      <div class="trust-item">
+        <div class="n">96<span class="u">%</span></div>
+        <div class="t">家長推薦</div>
+        <div class="s">16 則 Google 評論</div>
+      </div>
+      <div class="trust-item">
+        <div class="n">9<span class="u"> 門</span></div>
+        <div class="t">樂器與團班課程</div>
+        <div class="s">Nine programmes</div>
+      </div>
+      <div class="trust-item">
+        <div class="n lat">在地</div>
+        <div class="t">斗南六合街教室</div>
+        <div class="s">Dounan, Yunlin</div>
+      </div>
+      <div class="trust-item">
+        <div class="n lat">免費</div>
+        <div class="t">可預約試上</div>
+        <div class="s">Free trial lesson</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== INTERMISSION / LAWN (supporting plate) ===== -->
+<section class="inter">
+  <div class="wrap">
+    <div class="inter-head">
+      <h2><span class="lat">Intermission, on the lawn.</span>中場・走到大樹下</h2>
+      <p>從滿座的音樂廳，到大樹下的草地音樂會——年度成果展，把這一年的練習唱回給家人與彼此聽。</p>
+    </div>
+    <figure class="inter-photo">
+      <img src="../../assets/photo-lawn.jpg" alt="惠歆音樂社草地音樂會，大樹下野餐墊上席地而坐的家庭與學生">
+      <figcaption>
+        <span class="lat">Our students, one big chorus.</span>
+        <span>惠歆音樂社 · 草地音樂會</span>
+      </figcaption>
+    </figure>
+    <p class="inter-note">草地音樂會為年度成果展 · 真實活動。下期檔期將由教室公告</p>
+  </div>
+</section>
+
+<!-- ===== FINALE / BOOKING ===== -->
+<section class="finale">
+  <div class="wrap">
+    <svg class="laurel-mini" width="54" height="40" viewBox="0 0 54 40" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+      <path d="M27 38 C12 30 5 18 6 6 q12 2 16 14"/>
+      <path d="M27 38 C42 30 49 18 48 6 q-12 2 -16 14"/>
+      <path d="M11 20 q-6 -2 -8 -9 q7 0 9 6z"/>
+      <path d="M43 20 q6 -2 8 -9 q-7 0 -9 6z"/>
+    </svg>
+    <div class="eyebrow">招生中 · Now enrolling</div>
+    <h2>下一首曲目，留給你。</h2>
+    <p class="sub-lat">喜歡，才是最強大的動力。</p>
+    <a class="btn-wine" href="tel:055966996">預約試上</a>
+    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="../../assets/logo-wordmark.jpg" alt="惠歆音樂社 Museeksoul">
+      <p>惠歆音樂社 Museeksoul — 雲林・斗南在地音樂教室。用陪伴，培養每一顆音樂靈魂。</p>
+    </div>
+    <div class="foot-col">
+      <h4>Pages</h4>
+      <a href="index.html">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <p>雲林縣斗南鎮六合街127號</p>
+      <a href="tel:055966996">05-596-6996</a>
+      <a href="#">預約試上</a>
+    </div>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© 2026 惠歆音樂社 Museeksoul</span>
+    <span>Seek your music soul. · 斗南六合街</span>
+  </div>
+</footer>
+
+<!-- RATIONALE:
+  首頁概念=【D. programme — 節目冊／序曲（品味首選）】：把首頁做成一本「年度音樂會節目冊」的封面與序曲。
+  封面 hero＝音樂廳大合照（photo-hall.jpg）滿版攝影＋深色上下漸層罩，罩上壓淺色襯線：中置義式 Cormorant「Overture」大標、
+  序曲刊頭（OVERTURE 細線分隔）、刊頭欄（雲林斗南／年度節目冊 Concert Programme）、卷尾季節欄與圖說——典型節目冊封面手法；
+  再加一道內縮細線「印刷版式（plate）」框，強化「節目冊／印品」的隆重感，也讓 960px 低解析照片有留白緩衝、不糊。
+  辨識點（與其他三概念區隔）：本版＝節目冊封面＋「曲目單 Programme」式編排＋極致留白品味。
+  9 門課程不做卡片、不做課表，而是排成節目單「曲目」：羅馬數字 I–IX 編號＋中英並列＋一句逐字描述＋右側 Solo/Tutti 樂曲形式標記，
+  像翻一份音樂會曲目單那樣優雅列出；完整雙軸標籤系統留在 courses.html，首頁只「列曲目」、不展開細節（留白最多）。
+  區隔說明：recital 主打成就排場、family 主打人與溫度、stage 主打旅程導引；programme 唯一辨識點是「節目冊／曲目單／印刷版式」的品味與留白。
+  IA 取捨：序曲（副標語一句）→ 節目導聆（園丁＋月桂線稿）→ 曲目單九門 → 信任帶四項 → 中場草地（次要照片 photo-lawn 輔助）→ 終曲招生。
+  首頁↔課程頁互連：nav、九條曲目、prog-foot「翻開完整曲目單」、footer 共多處連到 courses.html；CTA 僅酒紅「預約試上」一處，含蓄但明確。
+  為何不 AI：真實音樂廳照片＋報頭式排版（非置中漸層 blob、非三欄 emoji 卡）；月桂為手繪 inline SVG；
+  零 emoji、零漸層 blob、零膠囊柔陰影；唯一深色喘息段為深鼠尾草綠中場區。
+  與 natural / round3 的關係：完全沿用同色票（白約80%／黑灰綠／酒紅僅 CTA）、同字體（Cormorant＋Noto Serif TC＋Montserrat＋少量 Caveat）、
+  同細線分隔／月桂 SVG／信任帶四欄／深綠喘息段／footer 手法；是 round3 editorial 的「音樂廳升級版」，更隆重、留白更多。
+  數據誠實：信任帶四項全部對照 brief 為真；草地音樂會註明真實活動但檔期待教室公告；未杜撰日期/價格/英文資歷。
+-->
+</body>
+</html>

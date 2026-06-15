@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惠歆音樂社 Museeksoul — 一整個音樂大家庭｜雲林・斗南 在地音樂教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&family=Montserrat:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --paper:#FCFCFA;
+    --ink:#1A1A1A;
+    --body:#3A3A3A;
+    --grey:#9A968F;
+    --sage:#6E7A5B;
+    --sage-deep:#4C543E;
+    --stone:#D9D2C5;
+    --line:#E7E3DA;
+    --wine:#9B4A3C;
+    --serif-lat:"Cormorant Garamond", Georgia, serif;
+    --serif-tc:"Noto Serif TC", serif;
+    --sans:"Montserrat","Noto Sans TC",sans-serif;
+    --script:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--serif-tc);
+    color:var(--body);
+    background:var(--white);
+    line-height:1.85;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(22px,5vw,56px);}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--grey);
+    font-weight:500;
+  }
+  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.18;}
+  .lat{font-family:var(--serif-lat);}
+
+  /* ---------- top bar ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand img{height:42px;width:auto;}
+  .brand .bz{font-family:var(--serif-lat);font-size:22px;letter-spacing:.02em;color:var(--ink);line-height:1;}
+  .brand .bz small{display:block;font-family:var(--serif-tc);font-size:11px;letter-spacing:.32em;color:var(--grey);margin-top:3px;}
+  nav.links{display:flex;gap:30px;align-items:center;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;color:var(--body);}
+  nav.links a{padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s;}
+  nav.links a:hover{color:var(--sage-deep);}
+  nav.links a.current{color:var(--ink);border-bottom-color:var(--sage);}
+  .nav-cta{
+    font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+    border:1px solid var(--wine);padding:10px 20px;color:var(--wine);
+    transition:.25s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--wine);color:#fff;}
+
+  /* ---------- hero (full-bleed concert hall, white frame, warm narrative) ---------- */
+  .hero{padding:clamp(28px,4vw,46px) 0 0;}
+  .hero-frame{position:relative;}
+  .hero-photo{position:relative;overflow:hidden;}
+  .hero-photo img{
+    width:100%;
+    height:clamp(440px,62vw,640px);
+    object-fit:cover;
+    object-position:center 42%;
+  }
+  /* soft warm wash — keeps faces readable, never a marketing gradient */
+  .hero-photo::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(26,26,26,.10) 0%,rgba(26,26,26,.04) 38%,rgba(26,26,26,.46) 100%);
+  }
+  .hero-cap{
+    position:absolute;left:clamp(16px,4vw,46px);right:clamp(16px,4vw,46px);
+    bottom:clamp(20px,4vw,42px);z-index:2;color:#fff;
+  }
+  .hero-cap .eyebrow{color:#e6e0d4;margin-bottom:16px;}
+  .hero-cap h1{
+    font-family:var(--serif-tc);color:#fff;font-weight:400;
+    font-size:clamp(28px,4.4vw,52px);letter-spacing:.01em;
+    line-height:1.22;max-width:16em;
+    text-shadow:0 1px 18px rgba(0,0,0,.28);
+  }
+  .hero-cap h1 .em{font-family:var(--serif-lat);font-style:italic;}
+  .hero-cap .ph{
+    margin-top:16px;font-family:var(--serif-lat);font-style:italic;
+    font-size:clamp(16px,2vw,21px);color:#e9e3d6;
+    text-shadow:0 1px 14px rgba(0,0,0,.3);
+  }
+  /* white caption plate, bottom-left, anchors the low-res photo with crisp type */
+  .hero-plate{
+    position:absolute;left:0;bottom:0;z-index:3;
+    background:#fff;padding:14px 26px 12px 22px;max-width:90%;
+  }
+  .hero-plate .lat{font-style:italic;font-size:clamp(16px,2vw,21px);color:var(--ink);line-height:1.2;}
+  .hero-plate small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;color:var(--grey);text-transform:uppercase;margin-top:4px;}
+
+  .hero-actions{margin-top:clamp(26px,4vw,38px);display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .btn-wine{
+    font-family:var(--sans);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--wine);color:#fff;padding:15px 32px;transition:.25s;display:inline-block;
+  }
+  .btn-wine:hover{background:#7e3b30;}
+  .link-arrow{font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;}
+  .link-arrow:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+  .hero-tagline{font-family:var(--serif-tc);font-size:clamp(20px,2.6vw,30px);color:var(--ink);font-weight:400;line-height:1.4;margin-top:clamp(24px,3.2vw,34px);}
+  .hero-tagline .em{font-family:var(--serif-lat);font-style:italic;color:var(--sage-deep);}
+  .hero-sub{font-size:15px;color:var(--body);max-width:30em;margin-top:14px;font-weight:300;}
+  .hero-sub .lat{font-style:italic;color:var(--grey);}
+
+  /* ---------- trust strip ---------- */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(40px,5vw,58px);}
+  .trust-in{display:flex;flex-wrap:wrap;align-items:stretch;}
+  .trust-item{flex:1;min-width:170px;padding:28px 30px;border-right:1px solid var(--line);}
+  .trust-item:last-child{border-right:none;}
+  .trust-item .n{font-family:var(--serif-lat);font-size:34px;color:var(--ink);line-height:1;font-weight:500;}
+  .trust-item .n .u{font-size:.55em;color:var(--sage);font-style:italic;margin-left:2px;}
+  .trust-item .t{font-family:var(--serif-tc);font-size:15px;color:var(--ink);margin-top:9px;font-weight:400;}
+  .trust-item .s{font-family:var(--sans);font-size:10px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin-top:5px;}
+
+  /* ---------- section heads ---------- */
+  section{padding:clamp(56px,8vw,100px) 0;}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap;}
+  .sec-head h2{font-size:clamp(26px,3.4vw,40px);}
+  .sec-head h2 .lat{display:block;font-style:italic;color:var(--grey);font-size:.55em;font-weight:400;margin-bottom:8px;letter-spacing:.02em;}
+  .sec-head p{max-width:24em;font-size:14px;color:var(--body);}
+
+  /* ---------- gardener narrative (front-loaded: warmth & growing-up-together) ---------- */
+  .garden{position:relative;overflow:hidden;background:var(--paper);}
+  .garden-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(34px,6vw,80px);align-items:center;}
+  .garden .quote{font-family:var(--serif-lat);font-style:italic;font-size:clamp(24px,3vw,34px);color:var(--ink);line-height:1.35;margin-bottom:26px;}
+  .garden .quote .tc{font-family:var(--serif-tc);font-style:normal;display:block;font-size:.62em;color:var(--sage-deep);margin-top:14px;letter-spacing:.04em;}
+  .garden p{font-size:15px;color:var(--body);margin-bottom:18px;max-width:34em;}
+  .garden .script{font-family:var(--script);font-size:30px;color:var(--sage);transform:rotate(-2deg);display:inline-block;}
+  .garden-art{display:flex;justify-content:center;align-items:center;}
+  .garden-art svg{width:100%;max-width:330px;height:auto;}
+
+  /* ---------- the family band (scale & belonging, grounded in the photo) ---------- */
+  .fam{background:var(--white);}
+  .fam-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);}
+  .fam-cell{padding:34px 30px 34px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .fam-cell:nth-child(2n){border-right:none;padding-right:0;padding-left:30px;}
+  .fam-cell .lat{font-family:var(--serif-lat);font-style:italic;font-size:18px;color:var(--sage);}
+  .fam-cell h3{font-family:var(--serif-tc);font-weight:500;font-size:22px;color:var(--ink);margin:8px 0 12px;line-height:1.4;}
+  .fam-cell p{font-size:14px;color:var(--body);font-weight:300;}
+
+  /* ---------- news / events teaser (the family's everyday life) ---------- */
+  .news .sec-head .placeholder-note{
+    font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--grey);border:1px solid var(--line);padding:5px 12px;align-self:center;white-space:nowrap;
+  }
+  .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
+  .news-item{padding:30px 28px 30px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .news-item:last-child{border-right:none;}
+  .news-item .when{font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;}
+  .news-item h3{font-family:var(--serif-tc);font-weight:500;font-size:21px;color:var(--ink);margin-bottom:12px;line-height:1.4;}
+  .news-item p{font-size:14px;color:var(--body);font-weight:300;}
+  .news-item .tba{font-family:var(--serif-lat);font-style:italic;font-size:14px;color:var(--grey);margin-top:16px;display:block;}
+
+  /* ---------- featured courses (4 of 9) ---------- */
+  .feat{background:var(--paper);}
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
+  .feat-card{padding:30px 26px 30px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .feat-card:last-child{border-right:none;}
+  .feat-card .idx{font-family:var(--serif-lat);font-style:italic;font-size:18px;color:var(--sage);}
+  .feat-card .nm{display:flex;align-items:baseline;gap:10px;margin:10px 0 12px;}
+  .feat-card .nm b{font-family:var(--serif-tc);font-weight:500;font-size:22px;color:var(--ink);}
+  .feat-card .nm .en{font-family:var(--serif-lat);font-style:italic;font-size:14px;color:var(--grey);}
+  .feat-card .ds{font-size:13.5px;color:var(--body);font-weight:300;}
+  .feat-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}
+  .tag{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--sage-deep);border:1px solid var(--stone);padding:3px 9px;white-space:nowrap;}
+  .tag.aim{color:var(--wine);border-color:#e3cfc9;}
+  .feat-more{text-align:center;margin-top:46px;}
+  .feat-more a{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px;transition:.2s;}
+  .feat-more a:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+
+  /* ---------- voices / lawn day (sage-deep breathing band) ---------- */
+  .voices{background:var(--sage-deep);color:#EDEFE8;}
+  .voices .eyebrow{color:#b9c0a8;}
+  .voices h2{color:#fff;}
+  .voices .sec-head h2 .lat{color:#b9c0a8;}
+  .voices .sec-head p{color:#d6dac8;}
+  .voices .sec-head .go{font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:#fff;border-bottom:1px solid #b9c0a8;padding-bottom:3px;align-self:center;}
+  .voices-photo{position:relative;margin-top:8px;}
+  .voices-photo img{width:100%;height:clamp(320px,44vw,540px);object-fit:cover;object-position:center 35%;}
+  .voices-photo figcaption{
+    margin-top:18px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline;
+    font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#b9c0a8;
+  }
+  .voices-photo figcaption .lat{font-family:var(--serif-lat);font-style:italic;font-size:20px;letter-spacing:0;text-transform:none;color:#fff;}
+
+  /* ---------- booking ---------- */
+  .book{text-align:center;}
+  .book .laurel-mini{color:var(--sage);margin:0 auto 20px;}
+  .book .eyebrow{margin-bottom:18px;}
+  .book h2{font-size:clamp(28px,4vw,46px);margin-bottom:18px;}
+  .book .sub-lat{font-family:var(--serif-lat);font-style:italic;font-size:20px;color:var(--grey);margin-bottom:34px;}
+  .book .btn-wine{font-size:13px;padding:17px 40px;}
+  .book .meta{margin-top:26px;font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--grey);}
+  .book .meta a{color:var(--ink);border-bottom:1px solid var(--stone);}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--paper);}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start;}
+  .foot-brand img{height:54px;margin-bottom:16px;}
+  .foot-brand p{font-size:13.5px;color:var(--body);max-width:24em;}
+  .foot-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:16px;font-weight:500;}
+  .foot-col p,.foot-col a{display:block;font-size:14px;color:var(--body);margin-bottom:9px;}
+  .foot-col a:hover{color:var(--sage-deep);}
+  .foot-bot{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--grey);}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    nav.links{display:none;}
+    .hero-photo img{height:clamp(420px,90vw,520px);}
+    .garden-grid{grid-template-columns:1fr;}
+    .garden-art{order:-1;}
+    .fam-grid{grid-template-columns:1fr;}
+    .fam-cell,.fam-cell:nth-child(2n){border-right:none;padding:26px 0;}
+    .foot-grid{grid-template-columns:1fr;gap:30px;}
+    .news-grid{grid-template-columns:1fr;}
+    .news-item{padding:26px 0;border-right:none;}
+    .feat-grid{grid-template-columns:1fr 1fr;}
+    .feat-card{padding:26px 22px 26px 0;}
+    .feat-card:nth-child(2n){border-right:none;}
+  }
+  @media(max-width:560px){
+    .nav-in{height:64px;}
+    .brand img{height:36px;}
+    .brand .bz{font-size:19px;}
+    .nav-cta{padding:8px 14px;font-size:11px;letter-spacing:.1em;}
+    .trust-item{flex:1 1 50%;border-bottom:1px solid var(--line);padding:22px 18px;}
+    .trust-item:nth-child(2n){border-right:none;}
+    .trust-item .n{font-size:30px;}
+    .hero-photo img{height:clamp(360px,108vw,460px);}
+    .hero-plate{padding:11px 16px 9px 14px;}
+    .feat-grid{grid-template-columns:1fr;}
+    .feat-card{border-right:none;}
+    .voices-photo img{height:clamp(260px,80vw,380px);}
+    .voices-photo figcaption{flex-direction:column;gap:6px;}
+    .sec-head{margin-bottom:36px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <img src="../../assets/logo-wordmark.jpg" alt="惠歆音樂社 Museeksoul">
+      <span class="bz">Museeksoul<small>惠 歆 音 樂 社</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html" class="current">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </nav>
+    <a class="nav-cta" href="#">預約試上</a>
+  </div>
+</header>
+
+<!-- ===== HERO — full-bleed concert hall, read as PEOPLE not spectacle ===== -->
+<section class="hero">
+  <div class="wrap">
+    <figure class="hero-frame">
+      <div class="hero-photo">
+        <img src="../../assets/photo-hall.jpg" alt="惠歆音樂社年度音樂會，木質尖頂音樂廳坐滿兩百多位學生與家長，前排師生身穿淺藍上衣與白褲、舉手歡呼">
+      </div>
+      <figcaption class="hero-cap">
+        <div class="eyebrow">雲林 · 斗南 在地音樂教室</div>
+        <h1>兩百多顆音樂靈魂，<br>一個<span class="em">大家庭</span>。</h1>
+        <p class="ph">坐滿的不是排場，是一起長大的人。</p>
+      </figcaption>
+      <div class="hero-plate">
+        <span class="lat">One hall, one big family.</span>
+        <small>惠歆音樂社 · 年度音樂會合影</small>
+      </div>
+    </figure>
+
+    <p class="hero-tagline">在音符間找到自信，在樂音中培養<span class="em">溫度</span>。</p>
+    <p class="hero-sub">惠歆音樂，用陪伴，培養每一顆音樂靈魂。　<span class="lat">Museeksoul — Seek your music soul.</span></p>
+    <div class="hero-actions">
+      <a class="btn-wine" href="tel:055966996">預約免費試上</a>
+      <a class="link-arrow" href="courses.html">瀏覽九門課程 →</a>
+    </div>
+  </div>
+
+  <!-- trust strip — every figure grounded in brief -->
+  <div class="wrap">
+    <div class="trust">
+      <div class="trust-in">
+        <div class="trust-item">
+          <div class="n">96<span class="u">%</span></div>
+          <div class="t">家長推薦</div>
+          <div class="s">16 則 Google 評論</div>
+        </div>
+        <div class="trust-item">
+          <div class="n lat">大家庭</div>
+          <div class="t">學生與家長同台</div>
+          <div class="s">One big family</div>
+        </div>
+        <div class="trust-item">
+          <div class="n">9<span class="u"> 門</span></div>
+          <div class="t">樂器與團班課程</div>
+          <div class="s">Nine programmes</div>
+        </div>
+        <div class="trust-item">
+          <div class="n lat">免費</div>
+          <div class="t">可預約試上</div>
+          <div class="s">Free trial lesson</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GARDENER NARRATIVE — front-loaded: warmth & growing up together ===== -->
+<section class="garden">
+  <div class="wrap garden-grid">
+    <div class="garden-copy">
+      <div class="eyebrow" style="margin-bottom:24px;">音樂園丁 · The Music Gardener</div>
+      <p class="quote">
+        We grow up together, note by note.
+        <span class="tc">喜歡，才是最強大的動力。</span>
+      </p>
+      <p>音樂園丁，用無比的熱忱與耐心澆灌每位音樂種子，以期萌芽、成長、茁壯，陪伴莘莘學子綻放出屬於自己的音樂之花。</p>
+      <p>所以那張坐滿人的合照，對我們而言不是一場表演的成績單——而是這個大家庭一年又一年，一起把每顆種子陪到開花的合影。</p>
+      <p class="script">陪伴 · 一起長大 · 一起綻放</p>
+    </div>
+
+    <div class="garden-art">
+      <!-- elegant inline botanical: laurel wreath cradling a music seed -->
+      <svg viewBox="0 0 300 320" fill="none" stroke="var(--sage)" stroke-width="1.2" stroke-linecap="round" aria-hidden="true">
+        <path d="M150 300 C90 270 55 215 50 150"/>
+        <path d="M150 300 C210 270 245 215 250 150"/>
+        <g>
+          <path d="M70 210 q-22 -6 -30 -26 q22 -2 32 16z"/>
+          <path d="M62 180 q-22 -8 -28 -28 q22 0 30 18z"/>
+          <path d="M58 150 q-22 -8 -26 -29 q22 1 28 19z"/>
+          <path d="M60 122 q-20 -10 -24 -30 q21 3 26 21z"/>
+        </g>
+        <g>
+          <path d="M230 210 q22 -6 30 -26 q-22 -2 -32 16z"/>
+          <path d="M238 180 q22 -8 28 -28 q-22 0 -30 18z"/>
+          <path d="M242 150 q22 -8 26 -29 q-22 1 -28 19z"/>
+          <path d="M240 122 q20 -10 24 -30 q-21 3 -26 21z"/>
+        </g>
+        <path d="M150 250 V160" stroke-width="1.3"/>
+        <path d="M150 200 C150 170 120 158 96 168 c0 30 30 30 54 12z"/>
+        <path d="M150 188 C150 162 178 152 200 162 c0 28 -26 26 -50 18z"/>
+        <path d="M150 150 c0 -26 26 -30 26 -52 c0 -16 -22 -18 -22 0 c0 30 6 60 -6 78 c-8 12 -26 8 -26 -6 c0 -10 14 -12 16 -2" stroke-width="1.1"/>
+        <circle cx="150" cy="160" r="2.4" fill="var(--sage)" stroke="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE FAMILY — what "a big family" actually means here ===== -->
+<section class="fam">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">Why we call it a family.</span>我們說的「大家庭」，是這個意思</h2>
+      <p>不是口號。是同一個廳裡，孩子、家長與老師，一起把音樂過成日常的這件事。</p>
+    </div>
+    <div class="fam-grid">
+      <div class="fam-cell">
+        <span class="lat">Children &amp; grown-ups, same hall.</span>
+        <h3>大人小孩，坐進同一個廳</h3>
+        <p>從幼兒到成人，學生與家長同台同坐。音樂不是孩子一個人的功課，是一家人一起的事。</p>
+      </div>
+      <div class="fam-cell">
+        <span class="lat">We stay, year after year.</span>
+        <h3>一年又一年，我們都還在</h3>
+        <p>很多孩子從第一個音符，陪到能坐上前排。陪伴是長期的——我們在意的是一起走多久。</p>
+      </div>
+      <div class="fam-cell">
+        <span class="lat">Selected music-school teachers.</span>
+        <h3>嚴選音樂系師資</h3>
+        <p>懂演奏，更懂怎麼陪一個孩子慢慢長大。把每位學生當自己家的人來教。</p>
+      </div>
+      <div class="fam-cell">
+        <span class="lat">Rooted in Dounan.</span>
+        <h3>扎根斗南六合街</h3>
+        <p>在地的音樂教室，街坊鄰里的大家庭。歡迎先來坐坐、聽聽聲音，再決定要不要加入。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWS / EVENTS TEASER — the family's everyday life (placeholder) ===== -->
+<section class="news">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">Everyday, together.</span>大家庭的日常</h2>
+      <span class="placeholder-note">示意佔位 · 待業主提供真實檔期</span>
+    </div>
+    <div class="news-grid">
+      <div class="news-item">
+        <div class="when">招生 · Enrolling</div>
+        <h3>暑期招生中</h3>
+        <p>八樣樂器與團班同步招生，依年齡與目的安排適合的起點，歡迎新成員加入這個家。</p>
+        <span class="tba">名額與時段待公佈</span>
+      </div>
+      <div class="news-item">
+        <div class="when">體驗 · Trial</div>
+        <h3>親子體驗日</h3>
+        <p>歡迎家長帶孩子來教室走走，一起聽見聲音、認識老師，再決定要不要開始。</p>
+        <span class="tba">場次待公佈</span>
+      </div>
+      <div class="news-item">
+        <div class="when">活動 · Gathering</div>
+        <h3>草地音樂會</h3>
+        <p>年度成果展，大樹下野餐、席地而坐，整個大家庭把這一年的努力唱給彼此聽。</p>
+        <span class="tba">日期待公佈</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED COURSES (4 of 9, then link to courses.html) ===== -->
+<section class="feat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">A few ways to begin.</span>幾種開始的方式</h2>
+      <p>這裡先放四門精選課程；完整九門課與年齡、目的標籤，都在課程頁。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="idx">01</div>
+        <div class="nm"><b>鋼琴</b><span class="en">Piano</span></div>
+        <div class="ds">從第一個音符開始，種下一輩子的興趣。</div>
+        <div class="feat-tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag aim">初級啟蒙</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">02</div>
+        <div class="nm"><b>小提琴</b><span class="en">Violin</span></div>
+        <div class="ds">站上舞台前，先在這裡找到屬於自己的聲音。</div>
+        <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">考級檢定</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">08</div>
+        <div class="nm"><b>烏克麗麗</b><span class="en">Ukulele</span></div>
+        <div class="ds">最輕巧的入門，幾個和弦就能開始唱。</div>
+        <div class="feat-tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag aim">初級啟蒙</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">09</div>
+        <div class="nm"><b>團班</b><span class="en">Ensemble</span></div>
+        <div class="ds">一個人練習會累，一群人玩音樂才有趣。</div>
+        <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">興趣養成</span></div>
+      </div>
+    </div>
+    <div class="feat-more">
+      <a href="courses.html">看全部九門課 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICES / LAWN DAY (sage-deep breathing band) ===== -->
+<section class="voices">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">From hall to lawn.</span>從音樂廳，到大樹下的草地</h2>
+      <a class="go" href="#">看音樂會成果 →</a>
+    </div>
+    <figure class="voices-photo">
+      <img src="../../assets/photo-group.jpg" alt="惠歆音樂社學生戶外大合照，穿著淺色衣服、坐在綠樹草地之間，手持樂器">
+      <figcaption>
+        <span class="lat">Our students, one big chorus.</span>
+        <span>惠歆音樂社 · 草地音樂會合影</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="book">
+  <div class="wrap">
+    <svg class="laurel-mini" width="54" height="40" viewBox="0 0 54 40" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+      <path d="M27 38 C12 30 5 18 6 6 q12 2 16 14"/>
+      <path d="M27 38 C42 30 49 18 48 6 q-12 2 -16 14"/>
+      <path d="M11 20 q-6 -2 -8 -9 q7 0 9 6z"/>
+      <path d="M43 20 q6 -2 8 -9 q-7 0 -9 6z"/>
+    </svg>
+    <div class="eyebrow">招生中 · Now enrolling</div>
+    <h2>來，成為這個大家庭的一員。</h2>
+    <p class="sub-lat">喜歡，才是最強大的動力。</p>
+    <a class="btn-wine" href="tel:055966996">預約免費試上</a>
+    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="../../assets/logo-wordmark.jpg" alt="惠歆音樂社 Museeksoul">
+      <p>惠歆音樂社 Museeksoul — 雲林・斗南在地音樂教室。用陪伴，培養每一顆音樂靈魂。</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="index.html">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <p>雲林縣斗南鎮六合街127號</p>
+      <a href="tel:055966996">05-596-6996</a>
+      <a href="#">預約免費試上</a>
+    </div>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© 2026 惠歆音樂社 Museeksoul</span>
+    <span>Seek your music soul. · 斗南六合街</span>
+  </div>
+</footer>
+
+<!-- RATIONALE:
+  首頁概念＝B. family「一整個音樂大家庭（溫度・社群首選）」。辨識點＝溫度、陪伴、一起長大的群體感，
+  刻意與 recital（成就排場）/ stage（旅程引導）/ programme（節目冊封面）三版區隔。
+  為何用音樂廳 hero：同一張滿座合照，這裡被「重新詮釋為人」而非排場——
+  滿版置底敘事「兩百多顆音樂靈魂，一個大家庭。」＋副句「坐滿的不是排場，是一起長大的人。」，
+  把焦點從「站上舞台的成就」轉向「同一個廳裡的人與情感」。「兩百多」為與照片相符之概略描述，未杜撰精確數字。
+  hero 手法：照片僅 960px，故 object-fit:cover 滿版＋object-position 對準前排師生臉部，
+  疊單向暗化罩（純為文字可讀，非行銷彩色漸層）讓白字浮現；左下白色 caption plate 用清晰襯線錨定低解析照片、呼應 natural 白框手法。
+  IA：園丁精神「前置」——緊接 hero 即為音樂園丁段，並補一句把合照解讀為「陪到開花的合影」，呼應溫度主軸；
+  接著「我們說的大家庭是這個意思」四格（大人小孩同坐／一年又一年陪伴／嚴選師資／扎根斗南，皆對照 brief 信任點），
+  動態區改寫為「大家庭的日常」（暑期招生/親子體驗日/草地音樂會，全標示意佔位、日期待公佈，不假裝已確認）；
+  精選 4 門課（鋼琴/小提琴/烏克麗麗/團班，偏家庭親和入門與群體）→「看全部九門課」連 courses.html，九門逐字留課程頁。
+  信任帶四項全為真（96%/16 則評論、大家庭學生與家長同台、9 門課、免費試上）；NAP 與 9 課程逐字照 round3 BRIEF §四。
+  為何不 AI：滿版真實照片 hero（非置中漸層 blob）；細線分隔的編輯式四格與三欄而非 emoji 卡；
+  深鼠尾草綠草地段為唯一深色喘息段；零 emoji、零彩色漸層 blob、零膠囊柔陰影、無 Inter、無亢奮行銷腔。
+  與 natural/round3 的關係：完全沿用同色票/字體/間距/月桂 inline SVG/信任帶/深綠段/footer，
+  唯一新變數＝hero 換音樂廳合照、首頁故事改以「溫度與大家庭」重講；nav 五頁＋酒紅 CTA 完整呈現多頁站，本輪實作 index/courses。
+-->
+</body>
+</html>
