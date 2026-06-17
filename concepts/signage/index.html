@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惠歆音樂社 Museeksoul — 雲林斗南・新竹竹北 在地音樂教室</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&family=Montserrat:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --paper:#FCFCFA;
+    --ink:#1A1A1A;
+    --body:#3A3A3A;
+    --grey:#9A968F;
+    --sage:#6E7A5B;
+    --sage-deep:#4C543E;
+    --stone:#D9D2C5;
+    --line:#E7E3DA;
+    --wine:#9B4A3C;
+    --serif-lat:"Cormorant Garamond", Georgia, serif;
+    --serif-tc:"Noto Serif TC", serif;
+    --sans:"Montserrat","Noto Sans TC",sans-serif;
+    --script:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--serif-tc);
+    color:var(--body);
+    background:var(--white);
+    line-height:1.85;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(22px,5vw,56px);}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--grey);
+    font-weight:500;
+  }
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.18;}
+  .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
+
+  /* ---------- nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand img{height:42px;width:auto;}
+  .brand .bz{font-family:var(--serif-lat);font-size:22px;letter-spacing:.02em;color:var(--ink);line-height:1;}
+  .brand .bz small{display:block;font-family:var(--serif-tc);font-size:11px;letter-spacing:.32em;color:var(--grey);margin-top:3px;}
+  nav.links{display:flex;gap:30px;align-items:center;font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;color:var(--body);}
+  nav.links a{padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s;}
+  nav.links a:hover{color:var(--sage-deep);}
+  nav.links a.current{color:var(--ink);border-bottom-color:var(--sage);}
+  .nav-cta{
+    font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+    border:1px solid var(--wine);padding:10px 20px;color:var(--wine);
+    transition:.25s;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--wine);color:#fff;}
+
+  /* ---------- HERO — the storefront plaque ---------- */
+  .hero{padding:clamp(38px,6vw,78px) 0 clamp(30px,4vw,52px);background:var(--paper);border-bottom:1px solid var(--line);}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 1fr;
+    gap:clamp(34px,6vw,84px);align-items:center;
+  }
+
+  /* the brass-plaque sign: large badge framed by a thin ruled plate */
+  .plaque{position:relative;}
+  .plaque-frame{
+    position:relative;
+    background:var(--white);
+    border:1px solid var(--stone);
+    padding:clamp(30px,4vw,52px) clamp(26px,4vw,46px) clamp(26px,3.5vw,42px);
+    box-shadow:0 1px 0 var(--line);
+  }
+  /* inner hairline rule, like an engraved bevel on a name plate */
+  .plaque-frame::before{
+    content:"";position:absolute;inset:9px;
+    border:1px solid var(--line);pointer-events:none;
+  }
+  .plaque-inner{position:relative;text-align:center;}
+  .plaque-badge{
+    width:clamp(190px,26vw,290px);height:auto;margin:0 auto clamp(14px,2vw,22px);
+  }
+  .plaque-name{
+    font-family:var(--serif-tc);font-weight:500;
+    font-size:clamp(26px,3.4vw,38px);letter-spacing:.42em;
+    color:var(--ink);line-height:1;
+    padding-left:.42em; /* compensate trailing letter-spacing for optical centring */
+  }
+  .plaque-rule{
+    width:46px;height:1px;background:var(--sage);
+    margin:clamp(16px,2vw,22px) auto clamp(14px,2vw,18px);
+  }
+  /* the one allowed English signature — a brand mark, not a headline */
+  .plaque-sig{
+    font-family:var(--serif-lat);font-style:italic;
+    font-size:clamp(17px,2vw,21px);color:var(--grey);letter-spacing:.02em;
+  }
+  .plaque-est{
+    font-family:var(--sans);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--grey);margin-top:clamp(14px,2vw,18px);
+  }
+
+  /* the copy column beside the sign — eyebrow, pitch row, CTA, no headline */
+  .hero-copy .eyebrow{margin-bottom:22px;}
+  .hero-copy .lead{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.6vw,16.5px);
+    color:var(--body);font-weight:300;max-width:30em;margin-bottom:8px;
+  }
+  .hero-copy .lead-lat{
+    font-family:var(--serif-lat);font-style:italic;font-size:18px;color:var(--grey);margin-bottom:30px;
+  }
+  .hero-pitch{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.7vw,17px);font-weight:500;
+    color:var(--ink);max-width:30em;margin:8px 0 28px;line-height:1.7;
+    border-left:3px solid var(--sage);padding-left:16px;
+  }
+  .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .btn-wine{
+    font-family:var(--sans);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--wine);color:#fff;padding:15px 30px;transition:.25s;display:inline-block;
+  }
+  .btn-wine:hover{background:#7e3b30;}
+  .link-arrow{font-family:var(--sans);font-size:12.5px;letter-spacing:.12em;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;}
+  .link-arrow:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+
+  /* small photo accent under the copy — the doorway glimpse */
+  .hero-accent{margin-top:clamp(30px,4vw,40px);display:flex;gap:18px;align-items:flex-end;}
+  .hero-accent figure{position:relative;flex:0 0 auto;width:clamp(150px,20vw,200px);}
+  .hero-accent img{width:100%;height:clamp(96px,12vw,128px);object-fit:cover;object-position:center 42%;border:1px solid var(--line);}
+  .hero-accent figcaption{
+    font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--grey);line-height:1.7;
+  }
+  .hero-accent figcaption .lat{font-family:var(--serif-lat);font-style:italic;font-size:16px;letter-spacing:0;text-transform:none;color:var(--ink);display:block;margin-bottom:3px;}
+
+  /* ---------- trust strip ---------- */
+  .trust{border-bottom:1px solid var(--line);}
+  .trust-in{display:flex;flex-wrap:wrap;align-items:stretch;}
+  .trust-item{flex:1;min-width:170px;padding:28px 30px;border-right:1px solid var(--line);}
+  .trust-item:last-child{border-right:none;}
+  .trust-item .n{font-family:var(--serif-lat);font-size:34px;color:var(--ink);line-height:1;font-weight:500;}
+  .trust-item .n .u{font-size:.55em;color:var(--sage);font-style:italic;margin-left:2px;}
+  .trust-item .t{font-family:var(--serif-tc);font-size:15px;color:var(--ink);margin-top:9px;font-weight:400;}
+  .trust-item .s{font-family:var(--sans);font-size:10px;letter-spacing:.18em;color:var(--grey);text-transform:uppercase;margin-top:5px;}
+
+  /* ---------- section heads ---------- */
+  section{padding:clamp(58px,8vw,104px) 0;}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap;}
+  .sec-head h2{font-size:clamp(26px,3.4vw,40px);}
+  .sec-head h2 .lat{display:block;font-style:italic;color:var(--grey);font-size:.55em;font-weight:400;margin-bottom:8px;letter-spacing:.02em;}
+  .sec-head p{max-width:24em;font-size:14px;color:var(--body);}
+
+  /* ---------- two locations (the two plaques) ---------- */
+  .where{background:var(--paper);}
+  .where-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+  .where-card{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(30px,4vw,44px);}
+  .where-card .badge{font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:16px;}
+  .where-card h3{font-family:var(--serif-tc);font-weight:500;font-size:24px;color:var(--ink);margin-bottom:6px;}
+  .where-card .en{font-family:var(--serif-lat);font-style:italic;font-size:16px;color:var(--grey);margin-bottom:18px;}
+  .where-card p{font-size:14.5px;color:var(--body);margin-bottom:6px;font-weight:300;}
+  .where-card a.tel{font-family:var(--serif-lat);font-size:22px;color:var(--ink);border-bottom:1px solid var(--stone);padding-bottom:2px;display:inline-block;margin-top:6px;}
+  .where-card a.tel:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+  .where-card .pending{font-family:var(--serif-lat);font-style:italic;font-size:16px;color:var(--grey);margin-top:8px;display:inline-block;}
+
+  /* ---------- featured courses ---------- */
+  .feat{background:var(--white);}
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);}
+  .feat-card{padding:30px 26px 30px 0;border-bottom:1px solid var(--line);border-right:1px solid var(--line);}
+  .feat-card:last-child{border-right:none;}
+  .feat-card .idx{font-family:var(--serif-lat);font-style:italic;font-size:18px;color:var(--sage);}
+  .feat-card .nm{display:flex;align-items:baseline;gap:10px;margin:10px 0 12px;}
+  .feat-card .nm b{font-family:var(--serif-tc);font-weight:500;font-size:22px;color:var(--ink);}
+  .feat-card .nm .en{font-family:var(--serif-lat);font-style:italic;font-size:14px;color:var(--grey);}
+  .feat-card .ds{font-size:13.5px;color:var(--body);font-weight:300;}
+  .feat-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}
+  .tag{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--sage-deep);border:1px solid var(--stone);padding:3px 9px;white-space:nowrap;}
+  .tag.aim{color:var(--wine);border-color:#e3cfc9;}
+  .feat-more{text-align:center;margin-top:46px;}
+  .feat-more a{font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:4px;transition:.2s;}
+  .feat-more a:hover{color:var(--sage-deep);border-color:var(--sage-deep);}
+
+  /* ---------- results / lawn concert (dark breathe) ---------- */
+  .results{background:var(--sage-deep);color:#EDEFE8;}
+  .results .eyebrow{color:#b9c0a8;}
+  .results h2{color:#fff;}
+  .results .sec-head h2 .lat{color:#b9c0a8;}
+  .results .sec-head .go{font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:#fff;border-bottom:1px solid #b9c0a8;padding-bottom:3px;align-self:center;}
+  .results-photo{position:relative;margin-top:8px;}
+  .results-photo img{width:100%;height:clamp(340px,46vw,560px);object-fit:cover;object-position:center 35%;}
+  .results-photo figcaption{
+    margin-top:18px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline;
+    font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#b9c0a8;
+  }
+  .results-photo figcaption .lat{font-family:var(--serif-lat);font-style:italic;font-size:20px;letter-spacing:0;text-transform:none;color:#fff;}
+
+  /* ---------- booking CTA ---------- */
+  .book{text-align:center;background:var(--paper);}
+  .book .laurel-mini{color:var(--sage);margin:0 auto 20px;}
+  .book .eyebrow{margin-bottom:18px;}
+  .book h2{font-size:clamp(28px,4vw,46px);margin-bottom:18px;}
+  .book .sub-lat{font-family:var(--serif-lat);font-style:italic;font-size:20px;color:var(--grey);margin-bottom:34px;}
+  .book .btn-wine{font-size:13px;padding:17px 40px;}
+  .book .meta{margin-top:26px;font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--grey);line-height:2;}
+  .book .meta a{color:var(--ink);border-bottom:1px solid var(--stone);}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--white);}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;align-items:start;}
+  .foot-brand img{height:54px;margin-bottom:16px;}
+  .foot-brand p{font-size:13.5px;color:var(--body);max-width:24em;}
+  .foot-col h4{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);margin-bottom:16px;font-weight:500;}
+  .foot-col p,.foot-col a{display:block;font-size:14px;color:var(--body);margin-bottom:9px;}
+  .foot-col a:hover{color:var(--sage-deep);}
+  .foot-bot{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--grey);}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:880px){
+    nav.links{display:none;}
+    .hero-grid{grid-template-columns:1fr;gap:38px;}
+    .plaque{order:-1;}
+    .where-grid{grid-template-columns:1fr;border-left:none;}
+    .where-card{border-right:none;}
+    .feat-grid{grid-template-columns:1fr 1fr;}
+    .feat-card{padding:26px 22px 26px 0;}
+    .feat-card:nth-child(2n){border-right:none;}
+    .foot-grid{grid-template-columns:1fr;gap:30px;}
+  }
+  @media(max-width:560px){
+    .nav-in{height:64px;}
+    .brand img{height:36px;}
+    .brand .bz{font-size:19px;}
+    .nav-cta{padding:8px 14px;font-size:11px;letter-spacing:.1em;}
+    .trust-item{flex:1 1 50%;border-bottom:1px solid var(--line);padding:22px 18px;}
+    .trust-item:nth-child(2n){border-right:none;}
+    .trust-item .n{font-size:30px;}
+    .plaque-name{font-size:23px;letter-spacing:.34em;padding-left:.34em;}
+    .hero-accent{flex-direction:column;align-items:flex-start;gap:12px;}
+    .hero-accent figure{width:100%;}
+    .feat-grid{grid-template-columns:1fr;}
+    .feat-card{border-right:none;}
+    .results-photo img{height:clamp(280px,80vw,400px);}
+    .results-photo figcaption{flex-direction:column;gap:6px;}
+    .sec-head{margin-bottom:36px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html">
+      <img src="../../assets/logo-circle.png" alt="惠歆音樂社 Museeksoul">
+      <span class="bz">Museeksoul<small>惠 歆 音 樂 社</small></span>
+    </a>
+    <nav class="links">
+      <a href="index.html" class="current">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </nav>
+    <a class="nav-cta" href="#">預約試上</a>
+  </div>
+</header>
+
+<!-- ===== HERO — STOREFRONT PLAQUE (no headline sentence) ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+
+    <!-- the sign itself: badge logo is the protagonist -->
+    <div class="plaque">
+      <div class="plaque-frame">
+        <div class="plaque-inner">
+          <img class="plaque-badge" src="../../assets/logo-circle.png"
+               alt="惠歆音樂社 Museeksoul 圓形徽章標誌，環字 MUSEEKSOUL 圍繞中央 M">
+          <div class="plaque-name">惠歆音樂社</div>
+          <div class="plaque-rule"></div>
+          <div class="plaque-sig">Seek your music soul.</div>
+          <div class="plaque-est">Est. in Dounan · 在地音樂教室</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- supporting copy: eyebrow + pitch row + CTA + photo accent, no big headline -->
+    <div class="hero-copy">
+      <div class="eyebrow">雲林斗南 · 新竹竹北 在地音樂教室</div>
+      <p class="lead">惠歆音樂，用陪伴，培養每一顆音樂靈魂。推開門，就從一堂免費試上開始。</p>
+      <p class="lead-lat">Museeksoul</p>
+      <p class="hero-pitch">8 樣樂器 ＋ 1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班</p>
+      <div class="hero-actions">
+        <a class="btn-wine" href="#">預約免費試上</a>
+        <a class="link-arrow" href="courses.html">瀏覽九門課程 →</a>
+      </div>
+      <div class="hero-accent">
+        <figure>
+          <img src="../../assets/photo-lawn.jpg" alt="惠歆音樂社草地音樂會，大樹下野餐墊上席地而坐的家庭與學生">
+        </figure>
+        <figcaption>
+          <span class="lat">A morning on the lawn.</span>
+          惠歆草地音樂會 · 斗南
+        </figcaption>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-in">
+      <div class="trust-item">
+        <div class="n">96<span class="u">%</span></div>
+        <div class="t">家長推薦</div>
+        <div class="s">16 則 Google 評論</div>
+      </div>
+      <div class="trust-item">
+        <div class="n">9<span class="u"> 門</span></div>
+        <div class="t">樂器與團班課程</div>
+        <div class="s">Nine programmes</div>
+      </div>
+      <div class="trust-item">
+        <div class="n lat">在地</div>
+        <div class="t">斗南・竹北兩處教室</div>
+        <div class="s">Dounan & Zhubei</div>
+      </div>
+      <div class="trust-item">
+        <div class="n lat">免費</div>
+        <div class="t">可預約試上</div>
+        <div class="s">Free trial lesson</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TWO LOCATIONS — the two storefront plaques ===== -->
+<section class="where">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">Two doors, one studio.</span>兩處教室，同一面招牌</h2>
+      <p>斗南與竹北各有一處教室——找離你最近的那扇門，走進來坐坐。</p>
+    </div>
+    <div class="where-grid">
+      <div class="where-card">
+        <div class="badge">教室一 · Studio 01</div>
+        <h3>斗南教室</h3>
+        <div class="en">Dounan, Yunlin</div>
+        <p>雲林縣斗南鎮六合街127號</p>
+        <a class="tel" href="tel:055966996">05-596-6996</a>
+      </div>
+      <div class="where-card">
+        <div class="badge">教室二 · Studio 02</div>
+        <h3>竹北教室</h3>
+        <div class="en">Zhubei, Hsinchu</div>
+        <p>新竹縣竹北市民權街17巷9號</p>
+        <span class="pending">電話籌備中</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED COURSES (4 of 9) ===== -->
+<section class="feat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">A few ways to begin.</span>幾種開始的方式</h2>
+      <p>這裡先放四門精選課程；完整九門課與年齡、目的標籤，都在課程頁。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="idx">01</div>
+        <div class="nm"><b>鋼琴</b><span class="en">Piano</span></div>
+        <div class="ds">看譜視奏、雙手協調到完整曲目，可一路銜接檢定考級。</div>
+        <div class="feat-tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag aim">初級啟蒙</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">02</div>
+        <div class="nm"><b>小提琴</b><span class="en">Violin</span></div>
+        <div class="ds">從持弓姿勢與音準開始，扎實基本功，循序站上舞台。</div>
+        <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">考級檢定</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">06</div>
+        <div class="nm"><b>古箏</b><span class="en">Guzheng</span></div>
+        <div class="ds">指尖在弦上行走，彈出一段東方的留白。</div>
+        <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">興趣養成</span></div>
+      </div>
+      <div class="feat-card">
+        <div class="idx">09</div>
+        <div class="nm"><b>團班</b><span class="en">Ensemble</span></div>
+        <div class="ds">小班合奏，學會聽彼此、跟上拍子，把練習變成一起玩的樂趣。</div>
+        <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">興趣養成</span></div>
+      </div>
+    </div>
+    <div class="feat-more">
+      <a href="courses.html">看全部九門課 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS / LAWN CONCERT ===== -->
+<section class="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="lat">Where it all blossoms.</span>把練習的成果，種回草地上</h2>
+      <a class="go" href="#">看音樂會成果 →</a>
+    </div>
+    <figure class="results-photo">
+      <img src="../../assets/photo-group.jpg" alt="惠歆音樂社學生戶外大合照，穿著淺色衣服、坐在綠樹草地之間，手持樂器">
+      <figcaption>
+        <span class="lat">Our students, one big chorus.</span>
+        <span>惠歆音樂社 · 草地音樂會合影</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section class="book">
+  <div class="wrap">
+    <svg class="laurel-mini" width="54" height="40" viewBox="0 0 54 40" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+      <path d="M27 38 C12 30 5 18 6 6 q12 2 16 14"/>
+      <path d="M27 38 C42 30 49 18 48 6 q-12 2 -16 14"/>
+      <path d="M11 20 q-6 -2 -8 -9 q7 0 9 6z"/>
+      <path d="M43 20 q6 -2 8 -9 q-7 0 -9 6z"/>
+    </svg>
+    <div class="eyebrow">招生中 · Now enrolling</div>
+    <h2>推開門，從一堂試上開始</h2>
+    <p class="sub-lat">喜歡，才是最強大的動力。</p>
+    <a class="btn-wine" href="tel:055966996">預約免費試上</a>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img src="../../assets/logo-circle.png" alt="惠歆音樂社 Museeksoul">
+      <p>惠歆音樂社 Museeksoul — 雲林斗南・新竹竹北在地音樂教室。用陪伴，培養每一顆音樂靈魂。</p>
+    </div>
+    <div class="foot-col">
+      <h4>Explore</h4>
+      <a href="index.html">首頁</a>
+      <a href="courses.html">課程</a>
+      <a href="#">師資</a>
+      <a href="#">音樂會成果</a>
+      <a href="#">關於惠歆</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
+      <a href="tel:055966996">05-596-6996</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
+      <a href="#">預約免費試上</a>
+    </div>
+  </div>
+  <div class="wrap foot-bot">
+    <span>© 2026 惠歆音樂社 Museeksoul</span>
+    <span>Seek your music soul. · 斗南六合街</span>
+  </div>
+</footer>
+
+<!-- RATIONALE:
+  本輪方向＝signage 招牌／門面式（round5 無標題 hero）。
+  招牌怎麼處理：hero 主角是「放大的圓形徽章 logo（logo-circle.png）」，用一面白底＋雙層細框（.plaque-frame + ::before 內框）
+  做成「銅牌／店面招牌」的質感——像走到教室門口抬頭看見的那面招牌。徽章下方只配中文「惠歆音樂社」（寬字距，
+  營造招牌刻字感）、一條 sage 細線、再一行 Est. 字樣。
+  ★依簡報指示：圓形 logo 本身已含「MUSEEKSOUL」環字，故招牌內「不重複放一模一樣的大字標」，
+  只用徽章＋中文社名；英文 wordmark 不再放大，避免雙重大字。
+  為何無標題仍成立：(1) 招牌本身就是 hero 主張——品牌標放到最大、置於畫面焦點，視覺重心由「品牌」承擔，
+  不需要一句情感大標破題；(2) 右欄用 eyebrow（雲林斗南・新竹竹北 在地音樂教室）＋一行輕量導語（非大標、font-weight 300、
+  小字級）＋賣點墊底行＋招生 CTA＋小照片點綴，把「是誰／賣什麼／在哪／怎麼開始」一次說清，
+  資訊完整但無任何 hero 主張句；(3) 唯一的英文簽名「Seek your music soul.」以小級數 italic 置於招牌內當品牌印記，
+  不是大標。整體像一面優雅的銅牌招牌，品牌自己說話。
+  無標題鐵則檢查：hero 區無任何情感大標（未放「在音符間找到自信…」）、無標語句；
+  所有文字皆為 eyebrow／品牌名／賣點行／導覽性短語，符合 BRIEF 鐵則 1。
+
+  商業強化（POC-SPEC A–E）：(A)body font-weight 400、h1–h3 600；
+  (B)hero 賣點墊底行「8 樣樂器＋1 團班…」（襯線/字重 500/左側 sage 3px 框）置於招牌旁文案區、CTA 上方；
+  (C)nav 上方常駐深綠招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」；
+  (D)精選 4 門課（鋼琴/小提琴/古箏/團班）文案＝能力導向逐字版，古箏保留詩意句；
+  (E)兩處教室 NAP——斗南 雲林縣斗南鎮六合街127號/05-596-6996、竹北 新竹縣竹北市民權街17巷9號（電話業主未提供→留空、標「電話籌備中」不杜撰），
+  另立「兩處教室」區把兩處當兩面招牌呈現，呼應 signage 主題。
+  保留：數字信任帶（96% 家長推薦/16 則・9 門・在地・免費）、典雅白色票/字體/月桂線稿/深綠成果段、零 emoji/零漸層/響應式/CSS 內嵌。
+  與既有概念的區隔：其餘 POC 以照片或情感標語破題，本版以「品牌招牌」破題，是四個無標題方向中最「識別優先」的一版。
+-->
+</body>
+</html>
