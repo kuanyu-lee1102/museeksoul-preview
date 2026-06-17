@@ -31,7 +31,7 @@
     color:var(--body);
     background:var(--white);
     line-height:1.85;
-    font-weight:300;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%;}
@@ -46,8 +46,17 @@
     color:var(--grey);
     font-weight:500;
   }
-  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.18;}
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.18;}
   .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar (top enrolling strip) ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
 
   /* ---------- top bar ---------- */
   header.nav{
@@ -114,6 +123,12 @@
     font-size:.46em;color:#cdd2c0;letter-spacing:.02em;margin-bottom:.5em;
   }
   .hero .sub{color:#ece9e2;font-size:clamp(15px,1.5vw,17px);max-width:30em;margin-top:clamp(20px,2.5vw,28px);font-weight:300;}
+  /* sell-point line — light variant for dark hero */
+  .hero-pitch{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.7vw,17px);font-weight:500;
+    color:#f3f1ea;max-width:32em;margin-top:clamp(20px,2.5vw,26px);line-height:1.7;
+    border-left:3px solid rgba(205,210,192,.85);padding-left:16px;
+  }
   .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:clamp(26px,3vw,36px);}
   .btn-wine{
     font-family:var(--sans);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
@@ -261,6 +276,9 @@
 </head>
 <body>
 
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -292,6 +310,7 @@
         一年一度，<br>站上音樂廳的舞台。
       </h1>
       <p class="sub">惠歆音樂，用陪伴，培養每一顆音樂靈魂。從教室的第一個音符，到滿座音樂廳裡的這一刻。</p>
+      <p class="hero-pitch">8 樣樂器 ＋ 1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班</p>
       <div class="hero-actions">
         <a class="btn-wine" href="#">預約免費試上</a>
         <a class="link-light" href="courses.html">瀏覽九門課程 →</a>
@@ -428,13 +447,13 @@
       <div class="feat-card">
         <div class="idx">01</div>
         <div class="nm"><b>鋼琴</b><span class="en">Piano</span></div>
-        <div class="ds">從第一個音符開始，種下一輩子的興趣。</div>
+        <div class="ds">看譜視奏、雙手協調到完整曲目，可一路銜接檢定考級。</div>
         <div class="feat-tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag aim">初級啟蒙</span></div>
       </div>
       <div class="feat-card">
         <div class="idx">02</div>
         <div class="nm"><b>小提琴</b><span class="en">Violin</span></div>
-        <div class="ds">站上舞台前，先在這裡找到屬於自己的聲音。</div>
+        <div class="ds">從持弓姿勢與音準開始，扎實基本功，循序站上舞台。</div>
         <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">考級檢定</span></div>
       </div>
       <div class="feat-card">
@@ -446,7 +465,7 @@
       <div class="feat-card">
         <div class="idx">09</div>
         <div class="nm"><b>團班</b><span class="en">Ensemble</span></div>
-        <div class="ds">一個人練習會累，一群人玩音樂才有趣。</div>
+        <div class="ds">小班合奏，學會聽彼此、跟上拍子，把練習變成一起玩的樂趣。</div>
         <div class="feat-tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">興趣養成</span></div>
       </div>
     </div>
@@ -486,7 +505,7 @@
     <h2>明年站上那個舞台的，<br>會不會是你？</h2>
     <p class="sub-lat">喜歡，才是最強大的動力。</p>
     <a class="btn-wine" href="tel:055966996">預約免費試上</a>
-    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
   </div>
 </section>
 
@@ -507,8 +526,9 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <p>雲林縣斗南鎮六合街127號</p>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
       <a href="tel:055966996">05-596-6996</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
       <a href="#">預約免費試上</a>
     </div>
   </div>
@@ -533,6 +553,13 @@
     零 emoji、零漸層 blob、零膠囊柔陰影；標題用 Cormorant Garamond＋Noto Serif TC 而非 Inter；深鼠尾草綠草地段為唯一深色喘息段（呼應 round3 results 區）。
   與 natural/round3 的關係：完全沿用同色票/字體/間距/月桂 inline SVG/信任帶/深綠喘息段/footer 手法與 nav 五連結＋酒紅 CTA；
     唯一新變數＝hero 由 round3 的「左文右圖草地照」升級為「滿版音樂廳」、首頁故事由日常溫度改講年度音樂會的成就與隆重，草地照降為次要對照段。
+
+  商業強化（POC-SPEC A–E，§D 混血版）：加了五個支撐層——(A)body 300→400、標題 400→600 提升視覺重心（hero h1 explicit 400 保留隆重而不過重）；
+    (B)深色滿版 hero 上、情感標語下加「8 樣樂器＋1 團班…」賣點墊底行，採淺色字版（淺字 #f3f1ea＋半透明淺色左框），疊在 hero-veil 暗區仍可讀，不破壞沉浸感；
+    (C)nav 上方加常駐深綠 sage-deep 招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」——與深 hero 之間隔著白底 sticky nav，不會糊在一起；
+    (D)精選 4 門課文案換 SPEC §D 混血版（鋼琴/小提琴/團班改能力導向，古箏保留詩意「東方的留白」）；
+    (E)booking 與 footer NAP 補竹北教室（電話業主未提供→留空不杜撰）。
+  保留：深色滿版音樂廳 hero 與情感主標語「一年一度，站上音樂廳的舞台」（一字未動）、海報細白框與配色字體識別、數字信任帶 96%/9門/在地/免費、深綠草地喘息段、月桂線稿、響應式。
 -->
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>惠歆音樂社 Museeksoul — 從教室到音樂廳舞台的旅程｜雲林・斗南 在地音樂教室</title>
+<title>惠歆音樂社 Museeksoul — 從教室到音樂廳舞台的旅程｜雲林斗南 · 新竹竹北 在地音樂教室</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&family=Montserrat:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
     color:var(--body);
     background:var(--white);
     line-height:1.85;
-    font-weight:300;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%;}
@@ -46,8 +46,24 @@
     color:var(--grey);
     font-weight:500;
   }
-  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.18;}
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.18;}
   .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar (top enrolling strip) ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
+
+  /* ---------- hero sell-point pitch line (light version, sits on dark hero) ---------- */
+  .hero-pitch{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.7vw,17px);font-weight:500;
+    color:#fff;max-width:32em;margin:0 0 26px;line-height:1.7;
+    border-left:3px solid #e7d3ad;padding-left:16px;text-shadow:0 1px 18px rgba(0,0,0,.4);
+  }
 
   /* ---------- top bar ---------- */
   header.nav{
@@ -256,6 +272,9 @@
 </head>
 <body>
 
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -280,7 +299,7 @@
     <img src="../../assets/photo-hall.jpg" alt="惠歆音樂社年度音樂會，滿座的木質尖頂音樂廳，兩百多位學生與家長在紅椅觀眾席與舞台前合影歡呼">
     <div class="hero-inner wrap">
       <div class="hero-top">
-        <div class="eyebrow">雲林 · 斗南 在地音樂教室</div>
+        <div class="eyebrow">雲林斗南 · 新竹竹北 在地音樂教室</div>
         <div class="step-of">Stage III — The hall. 旅程的終點，是這座坐滿的音樂廳。</div>
       </div>
       <div class="hero-bottom">
@@ -288,6 +307,7 @@
         <p class="tagline">在音符間找到自信，在樂音中培養<span class="em">溫度</span>。</p>
         <p class="sub">惠歆音樂，用陪伴，培養每一顆音樂靈魂。</p>
         <p class="sub-lat">Museeksoul — Seek your music soul.</p>
+        <p class="hero-pitch">8 樣樂器 ＋ 1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班</p>
         <div class="hero-actions">
           <a class="btn-wine" href="tel:055966996">預約免費試上</a>
           <a class="link-arrow" href="#journey">看看這條路怎麼走 →</a>
@@ -491,7 +511,7 @@
     <h2>那就，從第一個音符開始走吧。</h2>
     <p class="sub-lat">喜歡，才是最強大的動力。</p>
     <a class="btn-wine" href="tel:055966996">預約免費試上</a>
-    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
   </div>
 </section>
 
@@ -512,9 +532,10 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <p>雲林縣斗南鎮六合街127號</p>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
       <a href="tel:055966996">05-596-6996</a>
-      <a href="tel:055966996">預約免費試上</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
+      <a href="#">預約免費試上</a>
     </div>
   </div>
   <div class="wrap foot-bot">
@@ -533,6 +554,9 @@
   禁杜撰：主副標語、金句、園丁文案、9 課程文案與標籤皆逐字照 brief；活動／檔期僅以「年度音樂會」「草地音樂會」既有活動帶過並明確標註「實際檔期以惠歆公告為準」，未發明價格/日期/英文資歷。
   為何不 AI：滿版真實照片 hero（非置中漂浮漸層 blob，深色罩僅為可讀性、非裝飾性紫藍漸層）；階段區為細線時間軸＋襯線羅馬數字而非三欄 emoji 卡；分流為細線網格編號路徑卡；全站零 emoji、零膠囊柔陰影；深鼠尾草綠終點區為唯一深色喘息段。
   與 natural/round3 的關係：完全沿用同色票、Cormorant Garamond＋Noto Serif TC＋Montserrat＋少量 Caveat、細線分隔、月桂 inline SVG、植物 SVG、信任帶、深綠喘息段、footer 手法與相對路徑；唯一新變數是 hero 改為音樂廳合照、首頁故事改為「旅程／階段」。
+
+  商業強化（POC-SPEC A–E）：加了五個支撐層——(A)body 300→400、h1,h2,h3 400→600 提升視覺重心（hero 主標 h1／tagline 以行內 font-weight:400 維持情感標語的輕盈，不被 600 覆蓋）；(B)在深色音樂廳 hero 的情感標語與 CTA 之間，加「8 樣樂器＋1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班」賣點墊底行，因 hero 為深色滿版故採淺色字版（白字、左側 #e7d3ad 金色 3px 框、文字陰影），「幼兒啟蒙到考級檢定」呼應下方三路徑分流；(C)nav 上方加常駐深綠招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」；(D)首頁無逐門課程描述卡（三路徑卡為旅程/識別文案，保留不動，吉他詩意句已在路徑 III），課程描述改 SPEC §D 混血版集中於 courses.html；(E)booking／footer NAP 補竹北教室（電話未提供留空不杜撰）、hero eyebrow 與 title 改「雲林斗南 · 新竹竹北」。
+  保留：深色滿版音樂廳 hero 與情感主標語「每一段練習，都在走向站上舞台的那一天。」「在音符間找到自信，在樂音中培養溫度。」（一字未動）、數字信任帶 96%/9門/在地/免費、I/II/III 階段時間軸與三路徑分流識別、配色/字體/月桂線稿/深綠喘息段、響應式。
 -->
 </body>
 </html>

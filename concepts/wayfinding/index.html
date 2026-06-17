@@ -31,7 +31,7 @@
     color:var(--body);
     background:var(--white);
     line-height:1.85;
-    font-weight:300;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%;}
@@ -46,8 +46,17 @@
     color:var(--grey);
     font-weight:500;
   }
-  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.18;}
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.18;}
   .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar (top enrolling strip) ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
 
   /* ---------- top bar ---------- */
   header.nav{
@@ -85,6 +94,11 @@
   .hero h1 .em{color:var(--sage-deep);}
   .hero .sub{font-size:16px;color:var(--body);max-width:30em;margin-bottom:9px;font-weight:300;}
   .hero .sub-lat{font-family:var(--serif-lat);font-style:italic;font-size:19px;color:var(--grey);margin-bottom:32px;}
+  .hero-pitch{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.7vw,17px);font-weight:500;
+    color:var(--ink);max-width:30em;margin:8px 0 30px;line-height:1.7;
+    border-left:3px solid var(--sage);padding-left:16px;
+  }
   .hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
   .hero-hint{font-family:var(--sans);font-size:11.5px;letter-spacing:.04em;color:var(--grey);margin-top:18px;}
   .btn-wine{
@@ -245,6 +259,9 @@
 </head>
 <body>
 
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -267,10 +284,11 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow">雲林 · 斗南 在地音樂教室</div>
+      <div class="eyebrow">雲林斗南 · 新竹竹北 在地音樂教室</div>
       <h1>在音符間找到自信，<br>在樂音中培養<span class="em">溫度</span>。</h1>
       <p class="sub">惠歆音樂，用陪伴，培養每一顆音樂靈魂。</p>
       <p class="sub-lat">Museeksoul — Seek your music soul.</p>
+      <p class="hero-pitch">8 樣樂器 ＋ 1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班</p>
       <div class="hero-actions">
         <a class="btn-wine" href="tel:055966996">預約免費試上</a>
         <a class="link-arrow" href="#paths">先告訴我們，你為誰而來 →</a>
@@ -475,7 +493,7 @@
     <h2>準備好，種下第一顆音符了嗎？</h2>
     <p class="sub-lat">喜歡，才是最強大的動力。</p>
     <a class="btn-wine" href="tel:055966996">預約免費試上</a>
-    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
   </div>
 </section>
 
@@ -488,8 +506,9 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <p>雲林縣斗南鎮六合街127號</p>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
       <a href="tel:055966996">05-596-6996</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
       <a href="tel:055966996">預約免費試上</a>
     </div>
     <div class="foot-col">
@@ -528,6 +547,12 @@
   招生／檔期凡未確認皆明確標「示意 · 待確認」，不假裝既成事實。
   與 natural 的關係：完全沿用 round2/natural 的色票、Cormorant＋Noto Serif TC＋Montserrat 字體、細線分隔、
   月桂線稿、植物 SVG、真實 logo＋兩張真實照片、信任帶與深色成果段手法；唯一差異是首頁概念與 IA（分流入口取代一頁式長捲軸）。
+
+  商業強化（POC-SPEC A–E，與 image 樣板一致）：加了五個支撐層——(A)body 300→400、標題 400→600 提升視覺重心；
+  (B)hero 情感標語下、CTA 上加「8 樣樂器＋1 團班 · 幼兒啟蒙到考級檢定…」賣點墊底行（襯線／字重 500／左側 sage 框），
+  其中「幼兒啟蒙到考級檢定」正好呼應本頁三條分流路徑；(C)nav 上方常駐深綠招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」；
+  (D)本頁不設課程卡，課程文案集中於 courses.html（混血版／吉他古箏保留詩意）；(E)booking 與 footer NAP 補竹北教室（電話未提供留空）、
+  hero eyebrow 改「雲林斗南 · 新竹竹北」。保留：hero 情感主標語（一字未動）、數字信任帶、三路徑分流識別、版面識別／配色／字體／月桂線稿／深綠喘息段、響應式。
 -->
 </body>
 </html>

@@ -31,7 +31,7 @@
     color:var(--body);
     background:var(--white);
     line-height:1.85;
-    font-weight:300;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%;}
@@ -42,8 +42,17 @@
     font-family:var(--sans);font-size:11px;letter-spacing:.34em;
     text-transform:uppercase;color:var(--grey);font-weight:500;
   }
-  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.18;}
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.18;}
   .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar (top enrolling strip) ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
 
   /* ---------- top bar (shared) ---------- */
   header.nav{
@@ -161,6 +170,9 @@
 </head>
 <body>
 
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
 <!-- ===== NAV (shared, courses active) ===== -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -219,21 +231,21 @@
       <div class="course" id="鋼琴">
         <div class="idx">01</div>
         <div class="name"><b>鋼琴</b><span class="en">Piano</span></div>
-        <div class="desc">從第一個音符開始，種下一輩子的興趣。</div>
+        <div class="desc">看譜視奏、雙手協調到完整曲目，可一路銜接檢定考級。</div>
         <div class="tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">初級啟蒙</span><span class="tag aim">考級檢定</span></div>
       </div>
 
       <div class="course" id="小提琴">
         <div class="idx">02</div>
         <div class="name"><b>小提琴</b><span class="en">Violin</span></div>
-        <div class="desc">站上舞台前，先在這裡找到屬於自己的聲音。</div>
+        <div class="desc">從持弓姿勢與音準開始，扎實基本功，循序站上舞台。</div>
         <div class="tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">考級檢定</span><span class="tag aim">興趣養成</span></div>
       </div>
 
       <div class="course" id="大提琴">
         <div class="idx">03</div>
         <div class="name"><b>大提琴</b><span class="en">Cello</span></div>
-        <div class="desc">低沉而溫厚的共鳴，陪你慢慢把樂句拉長。</div>
+        <div class="desc">從運弓到把位，扎實訓練低音聲部，拉出穩定溫厚的音色。</div>
         <div class="tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">初級啟蒙</span><span class="tag aim">興趣養成</span></div>
       </div>
 
@@ -247,7 +259,7 @@
       <div class="course" id="爵士鼓">
         <div class="idx">05</div>
         <div class="name"><b>爵士鼓</b><span class="en">Drums</span></div>
-        <div class="desc">把滿身的活力，敲成有節奏的快樂。</div>
+        <div class="desc">從基礎節拍到組合過門，練出穩定的節奏感與肢體協調。</div>
         <div class="tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">初級啟蒙</span><span class="tag aim">興趣養成</span></div>
       </div>
 
@@ -261,21 +273,21 @@
       <div class="course" id="長笛">
         <div class="idx">07</div>
         <div class="name"><b>長笛</b><span class="en">Flute</span></div>
-        <div class="desc">一口氣，化成清亮綿長的旋律線。</div>
+        <div class="desc">氣息控制與音色訓練，吹出清亮綿長的旋律，可備考檢定。</div>
         <div class="tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">考級檢定</span><span class="tag aim">興趣養成</span></div>
       </div>
 
       <div class="course" id="烏克麗麗">
         <div class="idx">08</div>
         <div class="name"><b>烏克麗麗</b><span class="en">Ukulele</span></div>
-        <div class="desc">最輕巧的入門，幾個和弦就能開始唱。</div>
+        <div class="desc">最易上手的入門樂器，四個和弦就能自彈自唱。</div>
         <div class="tags"><span class="tag">幼兒</span><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">初級啟蒙</span></div>
       </div>
 
       <div class="course" id="團班">
         <div class="idx">09</div>
         <div class="name"><b>團班</b><span class="en">Ensemble</span></div>
-        <div class="desc">一個人練習會累，一群人玩音樂才有趣。</div>
+        <div class="desc">小班合奏，學會聽彼此、跟上拍子，把練習變成一起玩的樂趣。</div>
         <div class="tags"><span class="tag">兒童</span><span class="tag">成人</span><span class="tag aim">興趣養成</span></div>
       </div>
 
@@ -296,7 +308,7 @@
     <h2>來教室，先讓孩子遇見聲音</h2>
     <p>不確定哪一門最適合？預約一堂免費試上，由嚴選音樂系師資依年齡與目的，幫你找到最對的起點。</p>
     <a class="btn-wine" href="tel:055966996">預約免費試上</a>
-    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
   </div>
 </section>
 
@@ -309,8 +321,9 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <p>雲林縣斗南鎮六合街127號</p>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
       <a href="tel:055966996">05-596-6996</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
       <a href="tel:055966996">預約免費試上</a>
     </div>
     <div class="foot-col">
@@ -342,6 +355,13 @@
   Round3 refine：目的軸圖例改為可點的篩選鈕；首頁三分流卡以 courses.html?aim=初級啟蒙/考級檢定/興趣養成 進來時，
   本頁會自動「預選」該目的、把不含該目的的課程淡化（非隱藏，保留可瀏覽全貌），並顯示對應提示與「清除篩選」，
   讓首頁分流真正落到對應條件、不落空；提示文案也重申並非所有年齡×目的組合都開課。純漸進增強，無 JS 仍是完整課表。
+
+  商業強化（POC-SPEC A–E，與 image 樣板一致）：(A)body 300→400、標題 400→600 提升視覺重心；
+  (C)nav 上方常駐深綠招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」；
+  (D)全九門課程描述換成 SPEC §D 混血版（能力導向打底：鋼琴看譜視奏／小提琴扎實基本功／大提琴運弓把位／爵士鼓節拍過門／長笛氣息備考／烏克麗麗四和弦／團班小班合奏），
+  並依業主指定保留吉他「六根弦，就能彈出你最想哼的那首歌。」與古箏「指尖在弦上行走，彈出一段東方的留白。」兩句詩意溫度；
+  (E)closing note 與 footer NAP 補竹北教室（電話未提供留空、不杜撰）。
+  保留：九門課年齡×目的雙軸標籤與篩選互動、版面識別／配色／字體／月桂線稿／深綠喘息段、響應式；事實逐字未杜撰。
 -->
 <script>
 (function(){

@@ -31,7 +31,7 @@
     color:var(--body);
     background:var(--white);
     line-height:1.85;
-    font-weight:300;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;max-width:100%;}
@@ -47,8 +47,17 @@
     color:var(--grey);
     font-weight:500;
   }
-  h1,h2,h3{font-weight:400;color:var(--ink);line-height:1.16;}
+  h1,h2,h3{font-weight:600;color:var(--ink);line-height:1.16;}
   .lat{font-family:var(--serif-lat);}
+
+  /* ---------- announce bar (top enrolling strip) ---------- */
+  .announce{
+    background:var(--sage-deep);color:#EDEFE8;
+    text-align:center;font-family:var(--sans);
+    font-size:11.5px;letter-spacing:.14em;padding:8px 20px;
+  }
+  .announce a{color:#fff;border-bottom:1px solid rgba(237,239,232,.5);padding-bottom:1px;transition:.2s;}
+  .announce a:hover{border-bottom-color:#fff;}
 
   /* ---------- top bar ---------- */
   header.nav{
@@ -138,6 +147,11 @@
   .prelude .sub-lat{
     font-family:var(--serif-lat);font-style:italic;font-size:clamp(17px,2vw,22px);
     color:var(--grey);margin-top:24px;display:block;
+  }
+  .hero-pitch{
+    font-family:var(--serif-tc);font-size:clamp(15px,1.7vw,17px);font-weight:500;
+    color:var(--ink);max-width:32em;margin:34px 0 0;line-height:1.7;
+    border-left:3px solid var(--sage);padding-left:16px;
   }
 
   /* ---------- gardener / programme note ---------- */
@@ -265,6 +279,9 @@
 </head>
 <body>
 
+<!-- ===== ANNOUNCE BAR ===== -->
+<div class="announce">斗南・竹北 兩處教室 — 常年招生中　|　<a href="#">預約免費試上 →</a></div>
+
 <!-- ===== NAV ===== -->
 <header class="nav">
   <div class="wrap nav-in">
@@ -290,7 +307,7 @@
       <img src="../../assets/photo-hall.jpg" alt="惠歆音樂社年度音樂會，木質尖頂音樂廳內滿座的師生與家長，前排師生穿淺藍上衣舉手歡呼">
       <span class="cover-plate" aria-hidden="true"></span>
       <div class="cover-top">
-        <div class="col">雲林 · 斗南 在地音樂教室<b>Museeksoul</b></div>
+        <div class="col">雲林斗南 · 新竹竹北 在地音樂教室<b>Museeksoul</b></div>
         <div class="col r">年度節目冊<b>Concert Programme</b></div>
       </div>
       <div class="cover-center">
@@ -313,6 +330,7 @@
     <p class="lat">A house, full of music.</p>
     <p>惠歆音樂，用陪伴，<span class="quiet">培養每一顆音樂靈魂。</span></p>
     <span class="sub-lat">Museeksoul — Seek your music soul.</span>
+    <p class="hero-pitch">8 樣樂器 ＋ 1 團班 · 幼兒啟蒙到考級檢定 · 斗南／竹北兩處教室 · 一對一與小班</p>
   </div>
 </section>
 
@@ -368,17 +386,17 @@
     <div class="prog-list">
       <a class="track" href="courses.html">
         <div class="no">I</div>
-        <div class="ti"><div class="line"><b>鋼琴</b><span class="en">Piano</span></div><div class="ds">從第一個音符開始，種下一輩子的興趣。</div></div>
+        <div class="ti"><div class="line"><b>鋼琴</b><span class="en">Piano</span></div><div class="ds">看譜視奏、雙手協調到完整曲目，可一路銜接檢定考級。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
         <div class="no">II</div>
-        <div class="ti"><div class="line"><b>小提琴</b><span class="en">Violin</span></div><div class="ds">站上舞台前，先在這裡找到屬於自己的聲音。</div></div>
+        <div class="ti"><div class="line"><b>小提琴</b><span class="en">Violin</span></div><div class="ds">從持弓姿勢與音準開始，扎實基本功，循序站上舞台。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
         <div class="no">III</div>
-        <div class="ti"><div class="line"><b>大提琴</b><span class="en">Cello</span></div><div class="ds">低沉而溫厚的共鳴，陪你慢慢把樂句拉長。</div></div>
+        <div class="ti"><div class="line"><b>大提琴</b><span class="en">Cello</span></div><div class="ds">從運弓到把位，扎實訓練低音聲部，拉出穩定溫厚的音色。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
@@ -388,7 +406,7 @@
       </a>
       <a class="track" href="courses.html">
         <div class="no">V</div>
-        <div class="ti"><div class="line"><b>爵士鼓</b><span class="en">Drums</span></div><div class="ds">把滿身的活力，敲成有節奏的快樂。</div></div>
+        <div class="ti"><div class="line"><b>爵士鼓</b><span class="en">Drums</span></div><div class="ds">從基礎節拍到組合過門，練出穩定的節奏感與肢體協調。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
@@ -398,17 +416,17 @@
       </a>
       <a class="track" href="courses.html">
         <div class="no">VII</div>
-        <div class="ti"><div class="line"><b>長笛</b><span class="en">Flute</span></div><div class="ds">一口氣，化成清亮綿長的旋律線。</div></div>
+        <div class="ti"><div class="line"><b>長笛</b><span class="en">Flute</span></div><div class="ds">氣息控制與音色訓練，吹出清亮綿長的旋律，可備考檢定。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
         <div class="no">VIII</div>
-        <div class="ti"><div class="line"><b>烏克麗麗</b><span class="en">Ukulele</span></div><div class="ds">最輕巧的入門，幾個和弦就能開始唱。</div></div>
+        <div class="ti"><div class="line"><b>烏克麗麗</b><span class="en">Ukulele</span></div><div class="ds">最易上手的入門樂器，四個和弦就能自彈自唱。</div></div>
         <div class="form">Solo</div>
       </a>
       <a class="track" href="courses.html">
         <div class="no">IX</div>
-        <div class="ti"><div class="line"><b>團班</b><span class="en">Ensemble</span></div><div class="ds">一個人練習會累，一群人玩音樂才有趣。</div></div>
+        <div class="ti"><div class="line"><b>團班</b><span class="en">Ensemble</span></div><div class="ds">小班合奏，學會聽彼此、跟上拍子，把練習變成一起玩的樂趣。</div></div>
         <div class="form">Tutti</div>
       </a>
     </div>
@@ -479,7 +497,7 @@
     <h2>下一首曲目，留給你。</h2>
     <p class="sub-lat">喜歡，才是最強大的動力。</p>
     <a class="btn-wine" href="tel:055966996">預約試上</a>
-    <p class="meta">雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a></p>
+    <p class="meta">斗南教室　雲林縣斗南鎮六合街127號　·　<a href="tel:055966996">05-596-6996</a><br>竹北教室　新竹縣竹北市民權街17巷9號</p>
   </div>
 </section>
 
@@ -500,9 +518,10 @@
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <p>雲林縣斗南鎮六合街127號</p>
+      <p>斗南教室｜雲林縣斗南鎮六合街127號</p>
       <a href="tel:055966996">05-596-6996</a>
-      <a href="#">預約試上</a>
+      <p>竹北教室｜新竹縣竹北市民權街17巷9號</p>
+      <a href="#">預約免費試上</a>
     </div>
   </div>
   <div class="wrap foot-bot">
@@ -527,6 +546,16 @@
   與 natural / round3 的關係：完全沿用同色票（白約80%／黑灰綠／酒紅僅 CTA）、同字體（Cormorant＋Noto Serif TC＋Montserrat＋少量 Caveat）、
   同細線分隔／月桂 SVG／信任帶四欄／深綠喘息段／footer 手法；是 round3 editorial 的「音樂廳升級版」，更隆重、留白更多。
   數據誠實：信任帶四項全部對照 brief 為真；草地音樂會註明真實活動但檔期待教室公告；未杜撰日期/價格/英文資歷。
+
+  商業強化（POC-SPEC A–E）：加了五個克制的支撐層，不破壞節目冊封面/曲目單/留白品味——
+  (A)body 300→400、標題 400→600 提升視覺重心（prelude 大襯線 lede 刻意保留 300 維持卷首語呼吸感）；
+  (B)封面 hero 是深色罩、不在罩上加賣點以免破壞 Overture 中置構圖；改放封面下方第一個白底序曲區、sub-lat 之後，
+     以一般版 .hero-pitch（襯線/字重 500/左側 sage 框）墊一行「8 樣樂器＋1 團班…」具體賣點，是最得體不傷品味的位置；
+  (C)nav 上方常駐深綠招生條「斗南・竹北 兩處教室 — 常年招生中｜預約免費試上」；
+  (D)曲目單版式不動，僅把 7 門描述換成 SPEC §D 混血能力導向版；吉他 IV、古箏 VI 逐字保留原詩意句；
+  (E)封面刊頭欄 eyebrow 改「雲林斗南 · 新竹竹北」、finale 與 footer NAP 補竹北教室（電話業主未提供留空不杜撰）。
+  保留：封面主標 Overture／中文主標語「在音符間找到自信，在樂音中培養溫度。」一字未動、序曲/曲目單/印刷版式/極致留白識別、
+  數字信任帶 96%/9門/在地/免費、配色/字體/月桂線稿/深綠中場段、響應式；零 emoji、零漸層。
 -->
 </body>
 </html>
